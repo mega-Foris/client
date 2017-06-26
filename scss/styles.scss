@@ -1,0 +1,73 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-image: url("../foris-images/hikingSplash.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+main {
+	flex: 1 0 auto;
+}
+.parallax-container {
+	height: 100vh;
+}
+.main-nav{
+	background-color: #443728;
+}
+.main-footer{
+	background-color: #443728;
+}
+.copyright-text{
+	color: white;
+}
+.nav-buttons{
+	display: flex;
+	justify-content: center;
+}
+.sport-button{
+	margin-right: 2em;
+}
+.brand-logo{
+	margin-left: 1em;
+}
+.login-button{
+	float:right;
+}
+.search-card{
+	display: flex;
+	justify-content: center;
+	margin-top: 11em;
+	// position: absolute;
+  // top: 0;
+  // left: 0;
+  // height: 100%;
+  // width: 100%;
+	// margin: 0 auto;
+}
+.darken-1{
+	background-color: #443728;
+	opacity: 0.7;
+}
+.search-btn{
+	background-color: #686866;
+	opacity: 1;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+.main-container{
+	margin-bottom: 10em;
+}
+.main-search{
+	padding-left: 2em;
+}
+.about{
+	@extend body;
+	background-image: url("../foris-images/aboutSplash.jpg");
+}
+.about-card{
+	background-color: #443728;
+	opacity: 0.9;
+	margin-top: 5em;
+}

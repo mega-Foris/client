@@ -1,5 +1,4 @@
-$(appReady);
-
-function appReady(){
-  console.log('hey im linkedi');
-}
+$(document).ready(function(){
+	$('.parallax').parallax();
+	$('select').material_select();
+});
