@@ -16,5 +16,5 @@ function showEvents(events){
 		events
 	});
 
-	$('.trip-card').append(html);
+	$('.card-row').append(html);
 }
