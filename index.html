@@ -155,8 +155,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 		<script type="text/javascript" src="../javascript/client.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../javascript/shared.js" charset="utf-8"></script>
+    <script id="event-template" type="text/x-handlebars-template">
+               {{#each breaks}}
 
 
+                    <li class="event-list"><a href="#" class="event-list" data-id="{{id}}">{{title}}</a></li>
+
+
+              {{/each}}
+    </script>
 
   </body>
 </html>
