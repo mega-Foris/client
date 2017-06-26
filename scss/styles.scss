@@ -1,0 +1,33 @@
+.parallax-container {
+	height: 82.5vh;
+}
+.main-nav{
+	background-color: #443728;
+}
+.main-footer{
+	background-color: #443728;
+}
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+main {
+	flex: 1 0 auto;
+}
+.copyright-text{
+	color: white;
+}
+.nav-buttons{
+	display: flex;
+	justify-content: center;
+}
+.sport-button{
+	margin-right: 2em;
+}
+.brand-logo{
+	margin-left: 1em;
+}
+a:hover{
+	color: white;
+}
