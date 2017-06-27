@@ -17,6 +17,7 @@ function callAPI(URL){
   return $.get(URL);
 }
 
+
 function submitForm() {
 	$("form").submit(function(event){
 	    alert("YOU CLICKED IT!")
@@ -67,3 +68,4 @@ function submitForm() {
 
 	 })
 }
+
