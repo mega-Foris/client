@@ -16,7 +16,7 @@ for (var i = 0; i < split.length; i++) {
   split2.push(split[i].split('='));
   output[split2[i][0]] = split2[i][1];
 }
-return output;
+	return output;
 }
 
 function getEventInfo(id){
