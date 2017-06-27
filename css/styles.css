@@ -86,11 +86,9 @@ main {
   margin-right: 3em; }
 
 .logo-image {
-  max-width: 22%;
+  max-width: 20%;
   position: absolute;
-  left: 1em;
-  top: -4em;
-  border-radius: 5px solid black; }
+  top: -5em; }
 
 .main-splash {
   display: flex;
@@ -137,5 +135,8 @@ ul {
 
 .comment-title {
   text-align: center; }
+
+h6 {
+  font-size: 18px; }
 
 /*# sourceMappingURL=styles.css.map */
