@@ -125,24 +125,31 @@ ul{
 	margin: 2em;
 	padding-bottom: 2em;
 }
-.user-facts{
-	border: 1px solid black;
-	display: flex;
-	max-width: 50%;
-}
-.menu-items{
+.trip-info{
 	border: 1px solid black;
 	display: grid;
 	width: 45%;
 	float: left;
 	height: 20em;
 	margin: 2em;
+	padding-left: 1em;
 }
-.checkout{
+.user-facts{
 	border: 1px solid black;
 	display: grid;
 	width: 45%;
 	float: right;
 	height: 20em;
 	margin: 2em;
+	padding-left: 1em;
+}
+.event-comments{
+	border: 1px solid black;
+	display: grid;
+	width: 96%;
+	height: 20em;
+	margin: 2em;
+}
+.comment-title{
+	text-align: center;
 }
