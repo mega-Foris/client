@@ -112,8 +112,37 @@ main {
 	align-items: center;
 	align-content: center;
 }
-.carousel-slider{
-	max-height: 60vh;
-	max-width: 90vw;
-	margin-top: 3em;
+.carousel .carousel-item {
+	width: 450px !important;
+}
+.event-facts{
+	border: 1px solid black;
+	display: flex;
+	// display: inline-block;
+	max-width: 50%;
+}
+ul{
+	margin: 2em;
+	padding-bottom: 2em;
+}
+.user-facts{
+	border: 1px solid black;
+	display: flex;
+	max-width: 50%;
+}
+.menu-items{
+	border: 1px solid black;
+	display: grid;
+	width: 45%;
+	float: left;
+	height: 20em;
+	margin: 2em;
+}
+.checkout{
+	border: 1px solid black;
+	display: grid;
+	width: 45%;
+	float: right;
+	height: 20em;
+	margin: 2em;
 }

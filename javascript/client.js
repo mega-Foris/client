@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$('select').material_select();
 	$('.button-collapse').sideNav();
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
+	$('.carousel').carousel();
 
 	//upon loading, bring in three sample events for home page
 	getEvents().then(showEvents);
