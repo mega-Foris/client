@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$('select').material_select();
 	$('.button-collapse').sideNav();
 	$('.carousel').carousel();
+	datePicker();
 
 	datePicker()
 	//upon loading, bring in three sample events for home page
