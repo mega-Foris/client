@@ -6,6 +6,7 @@ $(document).ready(function(){
   getEventInfo(event_id).then(appendEventInfo);
 });//end document ready
 
+
 function getEventInfo(id){
 	let URL = prepareRequest(`api/v1/events/${id}`);
 	return callAPI(URL);
