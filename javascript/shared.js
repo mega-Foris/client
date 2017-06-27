@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	//materialize initializers
 	$('select').material_select();
@@ -6,28 +5,31 @@ $(document).ready(function(){
 	$('.carousel').carousel();
 });
 
-const heroku = 'https://forisevents.herokuapp.com/';
-const events_URL = 'api/v1/events';
 
-
-function getEvents(){
-	const URL = heroku + events_URL;
-	return $.get(URL);
+function prepareRequest(query){
+  const heroku = 'https://forisevents.herokuapp.com/';
+  const route_URL = query;
+  return heroku + route_URL;
 }
+
+function callAPI(URL){
+  return $.get(URL);
+}
+
 
 $("form").submit(function(event){
     //alert("YOU CLICKED IT!"
     event.preventDefault();
 
-    let title = $(".title").val()
+   let title = $(".title").val()
     let sport = $(".sport").val()
     var difficulty = $(".difficulty").val()
-		let duration =$(".duration").val()
-		let stratDate =
-		let finishDate = 
+        let duration =$(".duration").val()
+        let stratDate =
+        let finishDate =
     let userObject = {"title": title, "sport": sport, "difficulty": difficulty}
 
-    //preventDefault
+   //preventDefault
     console.log(userObject)
 
-  })
+ })
