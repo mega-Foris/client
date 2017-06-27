@@ -3,69 +3,30 @@ $(document).ready(function(){
 	$('select').material_select();
 	$('.button-collapse').sideNav();
 	$('.carousel').carousel();
-	submitForm();
+
 });
 
-
+//prepares full URL based on query ending
 function prepareRequest(query){
   const heroku = 'https://forisevents.herokuapp.com/';
   const route_URL = query;
   return heroku + route_URL;
 }
 
+//calls API with full URL
 function callAPI(URL){
   return $.get(URL);
 }
 
-
-function submitForm() {
-	$("form").submit(function(event){
-	    alert("YOU CLICKED IT!")
-	    event.preventDefault();
-
-	   let title = $(".title").val()
-	    let sport = $(".sport").val()
-	    var difficulty = $(".difficulty").val()
-	    let duration =$(".duration").val()
-	    let startDate = $(".time-from").val()
-	    let finishDate = $(".time-to").val()
-			let capacity = $(".capacity").val()
-			let description = $(".description").val()
-	    let eventObject = {
-				"title": title,
-				"main_sport": sport,
-				"difficulty": difficulty
-				}
-				$.post('https://localhost:3000/api/v1/events/createEvent', eventObject, function(eventObject){
-					console.log(eventObject);
-				})
-	   //preventDefault
-	    // console.log(eventObject)
-
-	 })
+//parse query strings to create objects of key value pairs
+function parseQueryString(queryString){
+  let output = {};
+  queryString = queryString.substring(1);
+  let split = queryString.split('&');
+  let split2 = [];
+  for (var i = 0; i < split.length; i++) {
+    split2.push(split[i].split('='));
+    output[split2[i][0]] = split2[i][1];
+  }
+  return output;
 }
-
-function submitForm() {
-	$("form").submit(function(event){
-	    alert("YOU CLICKED IT!")
-	    event.preventDefault();
-
-	    let first_name = $(".first_name").val()
-	    let last_name = $(".last_name").val()
-	    var email = $(".email").val()
-	    let password =$(".password").val()
-	    let personObject = {
-				"first_name": first_name,
-				"last_name": last_name,
-				"email": email,
-				"password":password
-				}
-				$.post('https://localhost:3000/api/v1/events/createPerson', personObject, function(personObject){
-					console.log(perosnObject);
-				})
-	   //preventDefault
-	    // console.log(eventObject)
-
-	 })
-}
-
