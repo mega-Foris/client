@@ -43,31 +43,31 @@
         <form class="col s12 ">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Title of your event here" id="Event Title" type="text" class="validate white-text">
+              <input placeholder="Title of your event here" id="Event Title" type="text" class="validate white-text title" data-length="32">
               <label for="Title">Title</label>
             </div>
           </div>
           <div class="col s12 m6 l4">
             <select class="drop-down-selection">
               <option value="" disabled selected>Choose Desired Sport</option>
-              <option class="" value="1">Kayak</option>
-              <option value="2">Climb</option>
-              <option value="3">Bike</option>
-              <option value="3">Hike</option>
+              <option class="sport" value="1">Kayak</option>
+              <option class="sport" value="2">Climb</option>
+              <option class="sport" value="3">Bike</option>
+              <option class="sport" value="4">Hike</option>
             </select>
           </div>
 
           <div class="col s12 m6 l4">
             <select class="drop-down-selection-2">
-              <option class = "selction-item" value="" disabled selected>Duration of Event</option>
-              <option class = "selction-item" value="1">Beginner</option>
-              <option class = "selction-item" value="2">Intermediate</option>
-              <option class = "selction-item" value="3">Advance</option>
+              <option class = "selction-item" value="" disabled selected>Difficulty of Event</option>
+              <option class = "selction-item difficulty" value="1">Beginner</option>
+              <option class = "selction-item difficulty" value="2">Intermediate</option>
+              <option class = "selction-item difficulty" value="3">Advance</option>
             </select>
           </div>
           <div class="col s12 m6 l4">
             <select class="drop-down-selection-3">
-              <option class = "selction-item white-text" value="" disabled selected>Choose Desired Difficulty</option>
+              <option class = "selction-item white-text" value="" disabled selected>Estimated Duration</option>
               <option class = "selction-item" value="1">1-2 hrs</option>
               <option class = "selction-item" value="2">3-4 hrs</option>
               <option class = "selction-item" value="3">5+ hrs</option>
