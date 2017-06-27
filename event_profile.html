@@ -52,10 +52,10 @@
 			<div class="left-container col s12">
 				<section class="trip-info">
 					<h4 class="trip-details-title"><i class="small material-icons">navigation</i>Trip Details:</h4>
-					<h6><i class="small material-icons">location_on</i>Location: </h6>
-					<h6><i class="small material-icons">today</i>Date: </h6>
-					<h6><i class="small material-icons">description</i>Activity: </h6>
-					<h6><i class="small material-icons">warning</i>Difficulty: </h6>
+					<h6 id='location'><i class="small material-icons">location_on</i>Location: </h6>
+					<h6 id='date'><i class="small material-icons">today</i>Date: </h6>
+					<h6 id='activity'><i class="small material-icons">description</i>Activity: </h6>
+					<h6 id='difficulty'><i class="small material-icons">warning</i>Difficulty: </h6>
 				</section>
 			</div>
 
@@ -120,7 +120,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
     <script type="text/javascript" src="./javascript/event_profile.js" charset="utf-8"></script>
-    <script id="event-template" type="text/x-handlebars-template"></script>
+		<script id="attendee-template" type="text/x-handlebars-template">
+		 {{#each people}}
+				<p class="script flow-text">{{first_name}}</p>
+     {{/each}}
+	 </script>
 
+	 <script id="comment-template" type="text/x-handlebars-template">
+		{{#each comment}}
+			 <p class="script flow-text">{{comment}}</p>
+		 {{/each}}
+	</script>
   </body>
 </html>
