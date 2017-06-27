@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	$('.parallax').parallax();
+	//materialize initializers
 	$('select').material_select();
 	$('.button-collapse').sideNav();
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
 
+	//upon loading, bring in three sample events for home page
 	getEvents().then(showEvents);
-	console.log('hello');
+	$('.card-row').on('click', '#main-page-events', handleEventRequest);
+	//click handler when clicking example event to take to event pag
 });
 
 
@@ -17,6 +19,9 @@ function showEvents(events){
 	const html = template({
 		events
 	});
-
 	$('.card-row').append(html);
+}
+
+function handleEventRequest(){
+	console.log($(this).data('id'));
 }
