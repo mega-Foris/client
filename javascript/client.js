@@ -2,6 +2,8 @@ $(document).ready(function(){
 	//materialize initializers
 	$('select').material_select();
 	$('.button-collapse').sideNav();
+	$('.carousel.carousel-slider').carousel({fullWidth: true});
+
 	//upon loading, bring in three sample events for home page
 	getEvents().then(showEvents);
 	$('.card-row').on('click', '#main-page-events', handleEventRequest);

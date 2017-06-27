@@ -1,12 +1,14 @@
-body, .about {
+body, .main-body, .about {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("../foris-images/hikingSplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   position: inherit; }
+
+.main-body {
+  background-image: url("../foris-images/hikingSplash.jpg"); }
 
 main {
   flex: 1 0 auto; }
@@ -89,5 +91,16 @@ main {
   left: 1em;
   top: -4em;
   border-radius: 5px solid black; }
+
+.main-splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.carousel-slider {
+  max-height: 60vh;
+  max-width: 90vw;
+  margin-top: 3em; }
 
 /*# sourceMappingURL=styles.css.map */
