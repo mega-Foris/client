@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	$('.parallax').parallax();
 	$('select').material_select();
+	$('.button-collapse').sideNav();
 
 	getEvents().then(showEvents);
-	console.log('hello ');
+	console.log('hello');
 });
 
 

@@ -5,7 +5,8 @@ body, .about {
   background-image: url("../foris-images/hikingSplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  position: inherit; }
 
 main {
   flex: 1 0 auto; }
@@ -14,7 +15,8 @@ main {
   height: 100vh; }
 
 .main-nav {
-  background-color: #443728; }
+  background-color: #443728;
+  justify-content: center; }
 
 .main-footer {
   background-color: #443728; }
@@ -28,9 +30,6 @@ main {
 
 .sport-button {
   margin-right: 2em; }
-
-.brand-logo {
-  margin-left: 1em; }
 
 .login-button {
   float: right; }
@@ -50,6 +49,9 @@ main {
   margin-left: 1em;
   margin-bottom: 1em; }
 
+.trip-card {
+  z-index: -10; }
+
 .main-container {
   margin-bottom: 10em; }
 
@@ -61,10 +63,31 @@ main {
 
 .about-card {
   background-color: #443728;
-  opacity: 0.9;
+  opacity: 0.7;
   margin-top: 5em; }
 
 .script {
-  text-overflow: ellipsis; }
+  overflow: scroll; }
+
+.large-logo {
+  padding-left: 1em; }
+
+@media only screen and (min-width: 780px) {
+  .brand-logo {
+    margin-left: 1em; } }
+.drop-down-selection {
+  color: white;
+  margin-right: 3em; }
+
+.drop-down-selection-2 {
+  color: white;
+  margin-right: 3em; }
+
+.logo-image {
+  max-width: 22%;
+  position: absolute;
+  left: 1em;
+  top: -4em;
+  border-radius: 5px solid black; }
 
 /*# sourceMappingURL=styles.css.map */

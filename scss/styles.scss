@@ -1,3 +1,7 @@
+//Variables//
+$color-base: #443728;
+
+
 body {
 	display: flex;
 	min-height: 100vh;
@@ -6,6 +10,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
+	position: inherit;
 }
 main {
 	flex: 1 0 auto;
@@ -14,10 +19,11 @@ main {
 	height: 100vh;
 }
 .main-nav{
-	background-color: #443728;
+	background-color: $color-base;
+	justify-content: center;
 }
 .main-footer{
-	background-color: #443728;
+	background-color: $color-base;
 }
 .copyright-text{
 	color: white;
@@ -30,7 +36,7 @@ main {
 	margin-right: 2em;
 }
 .brand-logo{
-	margin-left: 1em;
+	// margin-left: 1em;
 }
 .login-button{
 	float:right;
@@ -39,15 +45,9 @@ main {
 	display: flex;
 	justify-content: center;
 	margin-top: 11em;
-	// position: absolute;
-  // top: 0;
-  // left: 0;
-  // height: 100%;
-  // width: 100%;
-	// margin: 0 auto;
 }
 .darken-1{
-	background-color: #443728;
+	background-color: $color-base;
 	opacity: 0.7;
 }
 .search-btn{
@@ -55,6 +55,9 @@ main {
 	opacity: 1;
 	margin-left: 1em;
 	margin-bottom: 1em;
+}
+.trip-card{
+	z-index: -10;
 }
 .main-container{
 	margin-bottom: 10em;
@@ -67,10 +70,44 @@ main {
 	background-image: url("../foris-images/aboutSplash.jpg");
 }
 .about-card{
-	background-color: #443728;
-	opacity: 0.9;
+	background-color: $color-base;
+	opacity: 0.7;
 	margin-top: 5em;
 }
 .script{
-	text-overflow: ellipsis;
+	overflow: scroll;
+}
+.large-logo{
+	padding-left: 1em;
+}
+
+@media only screen and (min-width: 780px){
+	.brand-logo{
+		margin-left: 1em;
+	}
+}
+.drop-down-selection{
+	color: white;
+	margin-right: 3em;
+
+	// opacity: 1 !important;
+}
+.drop-down-selection-2{
+	color: white;
+	margin-right: 3em;
+	// opacity: 1 !important;
+}
+.select-dropdown{
+	// opacity: 1 !important;
+}
+#select-options-a047aa3b-9bec-3057-113c-ca8ef2651a45{
+	// color: black !important;
+	// opacity: 1 !important;
+}
+.logo-image{
+	max-width: 22%;
+	position: absolute;
+	left: 1em;
+	top: -4em;
+	border-radius: 5px solid black;
 }
