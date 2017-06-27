@@ -1,9 +1,5 @@
 
 $(document).ready(function(){
-	//materialize initializers
-	$('select').material_select();
-	$('.button-collapse').sideNav();
-	$('.carousel').carousel();
 	datePicker();
 
 	//upon loading, bring in three sample events for home page
@@ -13,18 +9,16 @@ $(document).ready(function(){
 	$('.card-row').on('click', '#main-page-events', handleEventRequest);
 });
 
-
+//appends event cards to page
 function showEvents(events){
-	console.log(events);
 	const source = $('#event-template').html();
 	const template = Handlebars.compile(source);
-
 	const html = template({
 		events
 	});
 	$('.card-row').append(html);
 }
-
+//creates calendar drop-down option
 function datePicker(){
 	$('.datepicker').pickadate({
 		selectMonths:true, // Creates a dropdown to control month
@@ -32,10 +26,8 @@ function datePicker(){
 	});
 }
 
+//redirects to event profile and sends id with query string
 function handleEventRequest(){
 	let id = $(this).data('id');
-//	let URL = prepareRequest(`api/v1/events/${id}`);
-//	callAPI(URL).then(function(response){
-		window.location.href = `./event_profile.html?id=${id}`;
-//	});
+	window.location.href = `./event_profile.html?id=${id}`;
 }
