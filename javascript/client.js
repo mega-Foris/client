@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$('.parallax').parallax();
 	$('select').material_select();
 	$('.button-collapse').sideNav();
+	$('.carousel.carousel-slider').carousel({fullWidth: true});
 
 	getEvents().then(showEvents);
 	console.log('hello');
