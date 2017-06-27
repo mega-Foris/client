@@ -75,29 +75,31 @@
           </div>
           <div class="row container">
             <div class = "col s6">
-              <label class="white-text" for="from_date">From:</label>
+              <label class="white-text time-from" for="from_date">From:</label>
               <input type="date" class="datepicker white-text">
             </div>
             <div class = "col s6">
-              <label class="white-text" for="to_date">To:</label>
+              <label class="white-text time-to" for="to_date">To:</label>
               <input type="date" class="datepicker white-text">
             </div>
           </div>
             <div class="row">
              <div class="input-field col s6">
-               <input id="input_text" type="text" data-length="3">
+               <input class="capacity" type="text" data-length="3">
                <label for="input_text">Capacity</label>
              </div>
           </div>
           <div class="row">
            <div class="input-field col s12">
-             <textarea id="textarea1" class="materialize-textarea"></textarea>
+             <textarea id="textarea1" class="materialize-textarea description"></textarea>
              <label for="textarea1">Description of event</label>
            </div>
          </div>
 
           <div>
-            <a class="waves-effect waves-light btn search-btn" href="#mid-snap-point" type="submit" id="search-button">SUBMIT</a>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
           </div>
 
 
