@@ -34,15 +34,8 @@ function datePicker(){
 
 function handleEventRequest(){
 	let id = $(this).data('id');
-	let URL = prepareRequest(`api/v1/events/${id}`);
-	callAPI(URL).then(function(response){
-		window.location.href = '../event_profile.html';
-		loadEventData(response);
-	});
-}
-
-
-function loadEventData(response){
-  console.log('we made it to the new page');
-	console.log(response);
+//	let URL = prepareRequest(`api/v1/events/${id}`);
+//	callAPI(URL).then(function(response){
+		window.location.href = `./event_profile.html?id=${id}`;
+//	});
 }
