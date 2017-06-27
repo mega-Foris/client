@@ -1,3 +1,10 @@
+$(document).ready(function(){
+	//materialize initializers
+	$('select').material_select();
+	$('.button-collapse').sideNav();
+	$('.carousel').carousel();
+});
+
 
 function prepareRequest(query){
   const heroku = 'https://forisevents.herokuapp.com/';
