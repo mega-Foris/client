@@ -5,11 +5,11 @@ $(document).ready(function(){
 	$('.carousel').carousel();
 	datePicker();
 
-	datePicker()
 	//upon loading, bring in three sample events for home page
-	getEvents().then(showEvents);
-	$('.card-row').on('click', '#main-page-events', handleEventRequest);
+	let URL = prepareRequest('api/v1/events');
+	callAPI(URL).then(showEvents);
 	//click handler when clicking example event to take to event pag
+	$('.card-row').on('click', '#main-page-events', handleEventRequest);
 });
 
 
@@ -25,13 +25,17 @@ function showEvents(events){
 }
 
 function datePicker(){
-
-	  $('.datepicker').pickadate({
-	    selectMonths: true, // Creates a dropdown to control month
-	    selectYears: 15 // Creates a dropdown of 15 years to control year
-	  });
+	$('.datepicker').pickadate({
+		selectMonths:true, // Creates a dropdown to control month
+		selectYears:15 // Creates a dropdown of 15 years to control year
+	});
 }
 
 function handleEventRequest(){
-	console.log($(this).data('id'));
+	let id = $(this).data('id');
+	let URL = prepareRequest(`api/v1/events/${id}`);
+	callAPI(URL).then(function(){
+		window.location.href = '../event_profile.html';
+		loadEventData;
+	});
 }
