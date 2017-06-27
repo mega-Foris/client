@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$('.carousel').carousel();
 	datePicker();
 
+	datePicker()
 	//upon loading, bring in three sample events for home page
 	getEvents().then(showEvents);
 	$('.card-row').on('click', '#main-page-events', handleEventRequest);
