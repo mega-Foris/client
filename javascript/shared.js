@@ -38,7 +38,11 @@ function handleQueryString(queryString){
 
 //redirects to event profile and sends id with query string
 function handleEventRequest(){
+	console.log('i was clicked');
+
 	let id = $(this).data('id');
+	console.log(id);
+
 	window.location.href = `./event_profile.html?id=${id}`;
 }
 
