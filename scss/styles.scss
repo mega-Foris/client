@@ -220,7 +220,7 @@ h6{
 }
 
 /* label color */
-	.input-field label {
+	.input .input-field label {
 		color: #ffffff;
 	}
 	/* label focus color */
@@ -228,7 +228,7 @@ h6{
 		color: #ffffff;
 	}
 	/* label underline focus color */
-	.input-field .date input[type=text]:focus {
+	.input .input-field .date input[type=text]:focus {
 		border-bottom: 1px solid #ffffff;
 		box-shadow: 0 1px 0 0 #ffffff;
 	}
