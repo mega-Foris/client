@@ -3,7 +3,6 @@
 $color-base: #443728;
 $color-text: white;
 
-
 body {
 	display: flex;
 	min-height: 100vh;
@@ -27,8 +26,6 @@ main {
 	background-color: $color-base;
 	justify-content: center;
 	min-height: 4.5em;
-	// margin-bottom: 5em;
-
 }
 .main-footer{
 	background-color: $color-base;
@@ -65,14 +62,6 @@ main {
 		background-color: $color-base;
 		color: white;
 	}
-	&:active{
-		background-color: $color-base;
-		color: white;
-	}
-	// &:visited{
-	// 	background-color: $color-base !important;
-	// 	color: white !important;
-	// }
 }
 .trip-card{
 	z-index: -10;
@@ -184,23 +173,6 @@ h6{
 .label{
 	color: white;
 }
-.button{
-	&:hover{
-		background-color: $color-base;
-		color: white;
-	}
-	&:active{
-		background-color: $color-base;
-		color: white;
-	}
-	// &:visited{
-	// 	background-color: $color-base !important;
-	// 	color: white !important;
-	// }
-}
-.event-description{
-	color: $color-text;
-}
 
 #profile-page-header .card-image {
   height: 225px;
@@ -215,16 +187,66 @@ h6{
   bottom: 0;
   margin: auto;
 }
+#textarea1:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white;
+}
 
-// .flex-container{
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// }
-// .create{
-// 	padding-left: 10em;
-// 	justify-content: center;
-// }
-// .float-right{
-// 	justify-content: flex-start;
-// }
+#textarea1:focus + label {
+  color: white;
+}
+.submit-btn{
+	background-color: $color-text;
+}
+.btn, .btn-large{
+	background-color: $color-text;
+	color: $color-base;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	&:hover{
+		background-color: $color-base;
+		color: white;
+	}
+	&:active{
+		background-color: $color-base;
+		color: white;
+	}
+	&:focus{
+		background-color:$color-text;
+		color: $color-base;
+	}
+}
+
+/* label color */
+	.input-field label {
+		color: #ffffff;
+	}
+	/* label focus color */
+	.input-field input[type=text]:focus + label {
+		color: #ffffff;
+	}
+	/* label underline focus color */
+	.input-field .date input[type=text]:focus {
+		border-bottom: 1px solid #ffffff;
+		box-shadow: 0 1px 0 0 #ffffff;
+	}
+	/* valid color */
+	.input-field input[type=text].valid {
+		border-bottom: 1px solid #ffffff;
+		box-shadow: 0 1px 0 0 #ffffff;
+	}
+	/* invalid color */
+	.input-field input[type=text].invalid {
+		border-bottom: 1px solid #ffffff;
+		box-shadow: 0 1px 0 0 #ffffff;
+	}
+	/* icon prefix focus color */
+	.input-field .prefix.active {
+		color: #ffffff;
+	}
+	// #search-button{
+	// 	// background-color: white;
+	// 	// &:visited{
+	// 	// 	// text-decoration: none;
+	// 	// }
+	// }

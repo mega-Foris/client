@@ -55,9 +55,6 @@ main {
   .search-btn:hover {
     background-color: #443728;
     color: white; }
-  .search-btn:active {
-    background-color: #443728;
-    color: white; }
 
 .trip-card {
   z-index: -10; }
@@ -162,16 +159,6 @@ h6 {
 .label {
   color: white; }
 
-.button:hover {
-  background-color: #443728;
-  color: white; }
-.button:active {
-  background-color: #443728;
-  color: white; }
-
-.event-description {
-  color: white; }
-
 #profile-page-header .card-image {
   height: 225px; }
 
@@ -184,5 +171,57 @@ h6 {
   top: 0;
   bottom: 0;
   margin: auto; }
+
+#textarea1:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white; }
+
+#textarea1:focus + label {
+  color: white; }
+
+.submit-btn {
+  background-color: white; }
+
+.btn, .btn-large {
+  background-color: white;
+  color: #443728;
+  margin-bottom: 1em;
+  margin-left: 1em; }
+  .btn:hover, .btn-large:hover {
+    background-color: #443728;
+    color: white; }
+  .btn:active, .btn-large:active {
+    background-color: #443728;
+    color: white; }
+  .btn:focus, .btn-large:focus {
+    background-color: white;
+    color: #443728; }
+
+/* label color */
+.input-field label {
+  color: #ffffff; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #ffffff; }
+
+/* label underline focus color */
+.input-field .date input[type=text]:focus {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #ffffff; }
 
 /*# sourceMappingURL=styles.css.map */

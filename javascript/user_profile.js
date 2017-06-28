@@ -56,7 +56,7 @@ function appendEvents(person){
   const template = Handlebars.compile(source);
   const html = template({person});
   console.log(html);
-  $('#event_cards_container').append(html);
+  $('.past-trips').append(html);
 
 }
 function showProfileCard(person){
