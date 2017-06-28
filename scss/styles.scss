@@ -36,23 +36,15 @@ main {
 .copyright-text{
 	color: $color-text;
 }
-
-// nav{
-// 	// margin-bottom: 5em;
-// 	display: flex;
-// 	flex-direction: column;
-// }
 .nav-buttons{
 	display: flex;
 	justify-content: center;
-	// margin-left: 30em;
 }
 .sport-button{
 	margin-right: 2em;
 }
 .login-button{
 	float: right;
-	// margin-right: 45%;
 }
 .search-card{
 	display: flex;
@@ -77,10 +69,10 @@ main {
 		background-color: $color-base;
 		color: white;
 	}
-	&:visited{
-		background-color: $color-base !important;
-		color: white !important;
-	}
+	// &:visited{
+	// 	background-color: $color-base !important;
+	// 	color: white !important;
+	// }
 }
 .trip-card{
 	z-index: -10;
@@ -186,6 +178,44 @@ ul{
 h6{
 	font-size: 18px;
 }
+.capacity{
+	color: $color-text;
+}
+.label{
+	color: white;
+}
+.button{
+	&:hover{
+		background-color: $color-base;
+		color: white;
+	}
+	&:active{
+		background-color: $color-base;
+		color: white;
+	}
+	// &:visited{
+	// 	background-color: $color-base !important;
+	// 	color: white !important;
+	// }
+}
+.event-description{
+	color: $color-text;
+}
+
+#profile-page-header .card-image {
+  height: 225px;
+}
+#profile-page-header .card-profile-image img {
+  width: 110px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 // .flex-container{
 // 	display: flex;
 // 	flex-direction: column;
