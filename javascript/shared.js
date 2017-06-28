@@ -38,6 +38,24 @@ function handleQueryString(queryString){
 
 //redirects to event profile and sends id with query string
 function handleEventRequest(){
+	console.log('i was clicked');
+
 	let id = $(this).data('id');
+	console.log(id);
+
 	window.location.href = `./event_profile.html?id=${id}`;
+}
+
+function getDifficultyImage(difficulty){
+	let image = '';
+	if(difficulty=='Beginner'){
+		image = '../foris-images/green-circle.svg';
+	}else if (difficulty=='Intermediate'){
+		image = '../foris-images/blue-square.svg';
+	}else if (difficulty=='Advanced'){
+		image = '../foris-images/black-diamond.svg';
+	}else {
+		image = '../foris-images/double-black.svg';
+	}
+	return image;
 }
