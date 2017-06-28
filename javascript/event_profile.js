@@ -38,4 +38,6 @@ function showComments(comment){
 function handleUserRequest(){
   let id = $(this).data('id');
   window.location.href = `./user_profile.html?id=${id}`;
-}
+
+
+
