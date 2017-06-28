@@ -24,7 +24,7 @@ function submitEventForm() {
       'main_sport': sport,
       'difficulty': difficulty
     };
-    $.post('https://localhost:3000/api/v1/events/createEvent', eventObject, function(eventObject){
+    $.post('https://forisevents.herokuapp.com/api/v1/events/createEvent', eventObject, function(eventObject){
     console.log(eventObject);
     });
   });
