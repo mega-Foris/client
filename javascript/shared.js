@@ -30,3 +30,8 @@ function parseQueryString(queryString){
   }
   return output;
 }
+
+function handleQueryString(queryString){
+  let output = parseQueryString(queryString);
+  return output.id;
+}

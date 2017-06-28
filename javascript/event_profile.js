@@ -4,6 +4,9 @@ $(document).ready(function(){
 
   //call API and append data to the page
   getEventInfo(event_id).then(appendEventInfo);
+
+  //add click handler to user name
+  $('.user-facts').on('click', '#user-name', handleUserRequest);
 });//end document ready
 
 function getEventInfo(id){
@@ -12,10 +15,27 @@ function getEventInfo(id){
 }
 
 function appendEventInfo(response){
-  console.log(response);
+    $('#location').append(response.city);
+    $('#date').append(response.date_time);
+    $('#activity').append(response.main_sport);
+    $('#difficulty').append(response.difficulty);
+    showAttendees(response.people);
+    showComments(response.comments);
+}
+function showAttendees(people){
+    const source = $('#attendee-template').html();
+    const template = Handlebars.compile(source);
+    const html = template({people});
+    $('.user-facts').append(html);
+}
+function showComments(comment){
+    const source = $('#comment-template').html();
+    const template = Handlebars.compile(source);
+    const html = template({comment});
+    $('.event-comments').append(html);
 }
 
-function handleQueryString(queryString){
-  let output = parseQueryString(queryString);
-  return output.id;
+function handleUserRequest(){
+  let id = $(this).data('id');
+  window.location.href = `./user_profile.html?id=${id}`;
 }
