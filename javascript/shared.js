@@ -35,3 +35,9 @@ function handleQueryString(queryString){
   let output = parseQueryString(queryString);
   return output.id;
 }
+
+//redirects to event profile and sends id with query string
+function handleEventRequest(){
+	let id = $(this).data('id');
+	window.location.href = `./event_profile.html?id=${id}`;
+}

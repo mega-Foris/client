@@ -25,9 +25,3 @@ function datePicker(){
 		selectYears:15 // Creates a dropdown of 15 years to control year
 	});
 }
-
-//redirects to event profile and sends id with query string
-function handleEventRequest(){
-	let id = $(this).data('id');
-	window.location.href = `./event_profile.html?id=${id}`;
-}
