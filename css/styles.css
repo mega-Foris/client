@@ -18,7 +18,8 @@ main {
 
 .main-nav {
   background-color: #443728;
-  justify-content: center; }
+  justify-content: center;
+  min-height: 4.5em; }
 
 .main-footer {
   background-color: #443728; }
@@ -46,10 +47,20 @@ main {
   opacity: 0.7; }
 
 .search-btn {
-  background-color: #686866;
+  background-color: white;
+  color: #443728;
   opacity: 1;
   margin-left: 1em;
   margin-bottom: 1em; }
+  .search-btn:hover {
+    background-color: #443728;
+    color: white; }
+  .search-btn:active {
+    background-color: #443728;
+    color: white; }
+  .search-btn:visited {
+    background-color: #443728 !important;
+    color: white !important; }
 
 .trip-card {
   z-index: -10; }
@@ -75,8 +86,9 @@ main {
   padding-left: 1em; }
 
 @media only screen and (min-width: 780px) {
-  .brand-logo {
-    margin-left: 1em; } }
+  .logo-image-text {
+    display: flex;
+    justify-content: flex-end; } }
 .drop-down-selection {
   color: white;
   margin-right: 3em; }
@@ -85,10 +97,17 @@ main {
   color: white;
   margin-right: 3em; }
 
+.select-dropdown {
+  color: white; }
+
 .logo-image {
-  max-width: 20%;
-  position: absolute;
-  top: -5em; }
+  max-width: 250px;
+  top: -2em; }
+
+.logo-image-text {
+  max-width: 150px;
+  top: .3em;
+  left: 1em; }
 
 .main-splash {
   display: flex;
@@ -131,7 +150,8 @@ ul {
   display: grid;
   width: 96%;
   height: 20em;
-  margin: 2em; }
+  margin: 2em;
+  padding-left: 1em; }
 
 .comment-title {
   text-align: center; }

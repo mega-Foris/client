@@ -23,12 +23,14 @@ function appendEventInfo(response){
     showComments(response.comments);
 }
 function showAttendees(people){
+    console.log(people);
     const source = $('#attendee-template').html();
     const template = Handlebars.compile(source);
     const html = template({people});
     $('.user-facts').append(html);
 }
 function showComments(comment){
+  console.log(comment);
     const source = $('#comment-template').html();
     const template = Handlebars.compile(source);
     const html = template({comment});
@@ -38,6 +40,4 @@ function showComments(comment){
 function handleUserRequest(){
   let id = $(this).data('id');
   window.location.href = `./user_profile.html?id=${id}`;
-
-
-
+}
