@@ -10,15 +10,19 @@ $(document).ready(function(){
 });//end document ready
 
 function getEventInfo(id){
+  console.log(id);
 	let URL = prepareRequest(`api/v1/events/${id}`);
+  console.log(URL);
 	return callAPI(URL);
 }
 
 function appendEventInfo(response){
+  console.log(response);
+  let difficulty = displayDifficulty(response.difficulty);
     $('#location').append(response.city);
     $('#date').append(response.date_time);
     $('#activity').append(response.main_sport);
-    $('#difficulty').append(response.difficulty);
+    $('#difficulty').append(difficulty);
     showAttendees(response.people);
     showComments(response.comments);
 }
@@ -40,4 +44,12 @@ function showComments(comment){
 function handleUserRequest(){
   let id = $(this).data('id');
   window.location.href = `./user_profile.html?id=${id}`;
+}
+
+function displayDifficulty(difficulty){
+ const img =   getDifficultyImage(difficulty);
+ let template = `
+ <img src=${img} height="25px" width = "25px" alt = ''>
+ `;
+ return template;
 }
