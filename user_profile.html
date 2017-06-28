@@ -68,13 +68,13 @@
       </div> -->
 			<div class="row">
 				<div class="col s6">
-					<section class="past-trips">
+					<section class="upcoming-trips">
 						<h4 class="user-trips">Upcoming Trips: </h4>
 					</section>
 				</div>
 
 				<div class="col s6">
-					<section class="upcoming-trips">
+					<section class="past-trips">
 						<h4 class="user-trips">Past Trips: </h4>
 					</section>
 				</div>
@@ -115,9 +115,31 @@
          {{/each}}
       {{/each}}
   </script>
-  <script id="event-user-profile-template" type="text/x-handlebars-template">
+  <script id="upcoming-event-user-profile-template" type="text/x-handlebars-template">
     {{#each person}}
-       {{#each events}}
+       {{#each futureevents}}
+         {{#each event_info}}
+         <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card-panel grey lighten-5 z-depth-1" id="event_profile_card"data-id={{this.id}}>
+            <div class="row valign-wrapper">
+              <div class="col s4">
+                <img src={{this.image_url}} alt="" class="square responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10">
+                <span class="black-text">
+                    {{this.description}}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+         {{/each}}
+        {{/each}}
+     {{/each}}
+  </script>
+  <script id="past-event-user-profile-template" type="text/x-handlebars-template">
+    {{#each person}}
+       {{#each pastevents}}
          {{#each event_info}}
          <div class="col s12 m8 offset-m2 l6 offset-l3">
           <div class="card-panel grey lighten-5 z-depth-1" id="event_profile_card"data-id={{this.id}}>

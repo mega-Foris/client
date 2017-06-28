@@ -20,7 +20,8 @@ function appendUserInfo(response){
   appendCoverPhoto(response);
   appendProfilePicture(response);
   showProfileCard(response_array);
-  appendEvents(response_array);
+  appendUpcomingEvents(response_array);
+  appendPastEvents(response_array);
   //showProfileAttributes(array[0].attributes);
 
 }
@@ -50,15 +51,26 @@ function appendProfilePicture(response){
   $('.profile-picture-container').append(html);
 }
 
-function appendEvents(person){
+function appendUpcomingEvents(person){
   console.log(person);
-  const source = $('#event-user-profile-template').html();
+  const source = $('#upcoming-event-user-profile-template').html();
   const template = Handlebars.compile(source);
   const html = template({person});
   console.log(html);
-  $('.past-trips').append(html);
-
+  console.log('future');
+  $('.upcoming-trips').append(html);
 }
+
+function appendPastEvents(person){
+  console.log(person);
+  const source = $('#past-event-user-profile-template').html();
+  const template = Handlebars.compile(source);
+  const html = template({person});
+  console.log(html);
+  console.log('past');
+  $('.past-trips').append(html);
+}
+
 function showProfileCard(person){
   console.log(person);
     const source = $('#user-profile-template').html();
