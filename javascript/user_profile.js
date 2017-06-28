@@ -6,7 +6,7 @@ $(document).ready(function(){
   getUserInfo(user_id).then(appendUserInfo);
 
   //adding click handler to event cards to direct to event profiles
-  $('#event_cards_container').on('click', '#event_profile_card', handleEventRequest);
+  $('.trip-container').on('click', '#event_profile_card', handleEventRequest);
 });//end document ready
 
 function getUserInfo(id){
@@ -66,8 +66,6 @@ function appendPastEvents(person){
   const source = $('#past-event-user-profile-template').html();
   const template = Handlebars.compile(source);
   const html = template({person});
-  console.log(html);
-  console.log('past');
   $('.past-trips').append(html);
 }
 
