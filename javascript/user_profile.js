@@ -13,5 +13,26 @@ function getUserInfo(id){
 }
 
 function appendUserInfo(response){
-  console.log(response);
+  let array = [];
+  array.push(response);
+  showProfileCard(array);
+  showProfileAttributes(array[0].attributes);
+}
+
+function showProfileCard(person){
+  console.log(person);
+    const source = $('#user-profile-template').html();
+    const template = Handlebars.compile(source);
+    const html = template({person});
+    console.log(html);
+  //  $('#user-profile-card').append(html);
+}
+
+function showProfileAttributes(attributes){
+  console.log(attributes);
+    const source = $('#attribute-profile-template').html();
+    const template = Handlebars.compile(source);
+    const html = template({attributes});
+    console.log(html);
+  // $('#user-profile-card').append(html);
 }
