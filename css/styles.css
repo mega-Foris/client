@@ -58,9 +58,6 @@ main {
   .search-btn:active {
     background-color: #443728;
     color: white; }
-  .search-btn:visited {
-    background-color: #443728 !important;
-    color: white !important; }
 
 .trip-card {
   z-index: -10; }
@@ -158,5 +155,34 @@ ul {
 
 h6 {
   font-size: 18px; }
+
+.capacity {
+  color: white; }
+
+.label {
+  color: white; }
+
+.button:hover {
+  background-color: #443728;
+  color: white; }
+.button:active {
+  background-color: #443728;
+  color: white; }
+
+.event-description {
+  color: white; }
+
+#profile-page-header .card-image {
+  height: 225px; }
+
+#profile-page-header .card-profile-image img {
+  width: 110px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
 
 /*# sourceMappingURL=styles.css.map */
