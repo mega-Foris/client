@@ -1,33 +1,76 @@
 $(document).ready(function(){
   //adds event listener for person creation form
+  submitLoginForm()
   submitPersonForm();
    $('.modal').modal();
 });
 
 //user profile creation
 function submitPersonForm() {
-          //console.log("called?");
+    //console.log("called?");
+  $('#signup').on('click', function (){
   $('form').submit(function(event){
     //alert('YOU CLICKED IT!');
     event.preventDefault();
     let first_name = $('#first_name').val();
     let last_name = $('#last_name').val();
-    var email = $('#email').val();
-    let password =$('#password').val();
+    var email = $('#submitemail').val();
+    let password =$('#submitpassword').val();
     let personObject = {
 				'first_name': first_name,
 				'last_name': last_name,
 				'email': email,
 				'password':password
       };
-      console.log(personObject);
       $.post('http://localhost:3000/auth/signup', personObject, function(personObject){
         console.log("Hey, POSTED!");
 			}).then( result=> {
         console.log(result);
+        localStorage.token = result.token;
+        // localStarage.user_id = result.id;
         alert('Sign-up Successful!')
       });
     });
+  })
+}
+function submitLoginForm() {
+  $('#login').on('click', function (){
+    $('form').submit(function(event){
+      //alert('YOU CLICKED IT!');
+      event.preventDefault();
+      var email = $('#email').val();
+      let password =$('#password').val();
+      let personObject = {
+  				'email': email,
+  				'password':password
+        };
+        console.log(personObject);
+        $.post('http://localhost:3000/auth/login', personObject, function(personObject){
+          console.log("Hey, POSTED!");
+  			}).then( result=> {
+          console.log(result);
+          localStorage.token = result.token
+          alert('Login Successful!')
+        });
+      });
+  })      //console.log("called?");
+  // $('form').submit(function(event){
+  //   //alert('YOU CLICKED IT!');
+  //   event.preventDefault();
+  //   var email = $('#email').val();
+  //   let password =$('#password').val();
+  //   let personObject = {
+	// 			'email': email,
+	// 			'password':password
+  //     };
+  //     console.log(personObject);
+  //     $.post('http://localhost:3000/auth/login', personObject, function(personObject){
+  //       console.log("Hey, POSTED!");
+	// 		}).then( result=> {
+  //       console.log(result);
+  //       alert('Login Successful!')
+  //     });
+  //   });
 }
 
 // forisevents.herokuapp.com/api/v1/persons/createPerson
