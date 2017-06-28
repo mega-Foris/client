@@ -160,7 +160,8 @@ h6 {
   color: white; }
 
 #profile-page-header .card-image {
-  height: 225px; }
+  max-height: 225px;
+  background-size: cover; }
 
 #profile-page-header .card-profile-image img {
   width: 110px;
@@ -223,5 +224,8 @@ h6 {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #ffffff; }
+
+h4 {
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

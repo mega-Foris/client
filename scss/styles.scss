@@ -175,7 +175,9 @@ h6{
 }
 
 #profile-page-header .card-image {
-  height: 225px;
+  max-height: 225px;
+	background-size: cover;
+	// position: fixed;
 }
 #profile-page-header .card-profile-image img {
   width: 110px;
@@ -244,9 +246,6 @@ h6{
 	.input-field .prefix.active {
 		color: #ffffff;
 	}
-	// #search-button{
-	// 	// background-color: white;
-	// 	// &:visited{
-	// 	// 	// text-decoration: none;
-	// 	// }
-	// }
+	h4{
+		text-align: center;
+	}
