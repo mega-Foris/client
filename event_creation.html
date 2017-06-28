@@ -28,7 +28,7 @@
 		        <li class="sport-button"><a href="about.html">About</a></li>
 		        <li class="sport-button"><a href="event_profile.html">Contact</a></li>
             <li class="login-button"><a href="#">Create Event!</a></li>
-						<li class="login-button"><a href="collapsible.html">Login/Singup</a></li>
+						<li data-target="modal1" class="login-button"><a href="collapsible.html">Login/Singup</a></li>
 					</ul>
 					<ul id="slide-out" class="side-nav">
 						<li><a href="about.html">About</a></li>
@@ -41,7 +41,8 @@
 		<main class="main-event-creation">
 
 
-      <div class="row container card darken-1">
+			<div class="container">
+				<div class="row card darken-1">
         <form class="create col s12">
           <div class="row">
             <div class="input-field col s6">
@@ -104,9 +105,55 @@
 				  	</button>
           </div>
 
-
         </form>
+				</div>
       </div>
+
+			<!-- Modal Structure -->
+
+
+
+
+
+
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<div class="row">
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s6">
+									<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+									<label  for="first_name">First Name</label>
+								</div>
+								<div class="input-field col s6">
+									<input id="last_name" type="text" class="validate">
+									<label for="last_name">Last Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email" type="email" class="validate">
+									<div class="row">
+										<label for="email">Email</label>
+									</div>
+									<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+									<button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+							<i class="material-icons right">send</i>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
 
 
     </main>
