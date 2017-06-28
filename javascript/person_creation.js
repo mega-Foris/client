@@ -21,7 +21,7 @@ function submitPersonForm() {
 				'password':password
       };
       console.log(personObject);
-      $.post('http://localhost:3000/api/v1/persons/createPerson', personObject, function(personObject){
+      $.post('https://forisevents.herokuapp.com/api/v1/persons/createPerson', personObject, function(personObject){
         console.log("Hey, POSTED!");
 			});
     });
