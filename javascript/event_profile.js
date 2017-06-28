@@ -4,16 +4,14 @@ $(document).ready(function(){
 
   //call API and append data to the page
   getEventInfo(event_id).then(appendEventInfo);
+
+  //add click handler to user name
+  $('.user-facts').on('click', '#user-name', handleUserRequest);
 });//end document ready
 
 function getEventInfo(id){
 	let URL = prepareRequest(`api/v1/events/${id}`);
 	return callAPI(URL);
-}
-
-function handleQueryString(queryString){
-  let output = parseQueryString(queryString);
-  return output.id;
 }
 
 function appendEventInfo(response){
@@ -36,3 +34,10 @@ function showComments(comment){
     const html = template({comment});
     $('.event-comments').append(html);
 }
+
+function handleUserRequest(){
+  let id = $(this).data('id');
+  window.location.href = `./user_profile.html?id=${id}`;
+
+
+

@@ -61,7 +61,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
     <script type="text/javascript" src="./javascript/user_profile.js" charset="utf-8"></script>
-
+    <script id="comment-template" type="text/x-handlebars-template">
+     {{#each comment}}
+        <p class="script flow-text">{{comment}}</p>
+      {{/each}}
+   </script>
 
   </body>
 </html>
