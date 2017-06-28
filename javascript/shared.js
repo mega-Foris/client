@@ -41,3 +41,17 @@ function handleEventRequest(){
 	let id = $(this).data('id');
 	window.location.href = `./event_profile.html?id=${id}`;
 }
+
+function getDifficultyImage(difficulty){
+	let image = '';
+	if(difficulty=='Beginner'){
+		image = '../foris-images/green-circle.svg';
+	}else if (difficulty=='Intermediate'){
+		image = '../foris-images/blue-square.svg';
+	}else if (difficulty=='Advanced'){
+		image = '../foris-images/black-diamond.svg';
+	}else {
+		image = '../foris-images/double-black.svg';
+	}
+	return image;
+}
