@@ -46,8 +46,8 @@
         <form class="create col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Title of your event here" id="Event Title" type="text" class="validate white-text title" data-length="32">
-              <label for="Title">Title</label>
+              <input placeholder="Title of your event here" id="Event Title" type="text" class="title white-text" data-length="32">
+              <label class="white-text" for="Title">Title</label>
             </div>
           </div>
           <div class="col s12 m6 l4">
@@ -83,19 +83,19 @@
             </div>
             <div class = "col s6">
               <label class="white-text time-to" for="to_date">To:</label>
-              <input type="date" class="datepicker white-text">
+              <input class="capacity white-text" type="date" class="datepicker white-text">
             </div>
           </div>
             <div class="row">
              <div class="input-field col s6">
                <input class="capacity white-text" type="text" data-length="3">
-               <label for="input_text">Capacity</label>
+               <label class="white-text" for="input_text white-text">Capacity</label>
              </div>
           </div>
           <div class="row">
            <div class="input-field col s12">
-             <textarea id="textarea1" class="event-description materialize-textarea description"></textarea>
-             <label for="textarea1">Description of event</label>
+             <textarea id="textarea1" class="event-description materialize-textarea description white-text"></textarea>
+             <label class="capacity white-text" for="textarea1 white-text">Description of event</label>
            </div>
          </div>
 
@@ -122,28 +122,28 @@
 						<form class="col s12">
 							<div class="row">
 								<div class="input-field col s6">
-									<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+									<input placeholder="Placeholder" id="first_name" type="text">
 									<label  for="first_name">First Name</label>
 								</div>
 								<div class="input-field col s6">
-									<input id="last_name" type="text" class="validate">
+									<input id="last_name" type="text">
 									<label for="last_name">Last Name</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="password" type="password" class="validate">
+									<input id="password" type="password">
 									<label for="password">Password</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="email" type="email" class="validate">
+									<input id="email" type="email">
 									<div class="row">
 										<label for="email">Email</label>
 									</div>
 									<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
-									<button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+									<button class="btn waves-effect waves-light modal-action modal-close submit-btn" type="submit" name="action">Submit
 							<i class="material-icons right">send</i>
 								</div>
 							</div>
@@ -176,6 +176,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./javascript/event_creation.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./javascript/person_creation.js" charset="utf-8"></script>
     <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
   </body>
 </html>
