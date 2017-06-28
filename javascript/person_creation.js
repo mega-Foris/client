@@ -21,8 +21,13 @@ function submitPersonForm() {
 				'password':password
       };
       console.log(personObject);
-      $.post('https://forisevents.herokuapp.com/api/v1/persons/createPerson', personObject, function(personObject){
+      $.post('http://localhost:3000/auth/signup', personObject, function(personObject){
         console.log("Hey, POSTED!");
-			});
+			}).then( result=> {
+        console.log(result);
+        alert('Sign-up Successful!')
+      });
     });
 }
+
+// forisevents.herokuapp.com/api/v1/persons/createPerson
