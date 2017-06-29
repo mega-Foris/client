@@ -1,7 +1,10 @@
 $(document).ready(function(){
   redirectIfLoggedIn();
 
-});
+  
+  });
+
+
 
 
 
