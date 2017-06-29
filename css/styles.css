@@ -226,8 +226,9 @@ h6 {
 .input-field .prefix.active {
   color: #ffffff; }
 
-input[type=date]:focus:not([readonly]) {
+input[type=email]:focus:not([readonly]) {
   border-bottom: white;
+  box-shadow: white;
   color: white; }
 
 h4 {
@@ -244,5 +245,9 @@ label {
 
 .login-body {
   background-image: url(../foris-images/girl-tent.jpg); }
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: white !important;
+  border-color: white; }
 
 /*# sourceMappingURL=styles.css.map */

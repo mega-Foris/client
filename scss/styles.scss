@@ -245,8 +245,9 @@ h6{
 .input-field .prefix.active {
 	color: #ffffff;
 }
-input[type=date]:focus:not([readonly]){
+input[type=email]:focus:not([readonly]){
 	border-bottom: $color-text;
+	box-shadow: $color-text;
 	color: $color-text;
 }
 h4{
@@ -265,9 +266,7 @@ label{
 	@extend body;
 	background-image: url(../foris-images/girl-tent.jpg);
 }
-
-// .event-profile-body{
-// 	@extend body;
-// 	background-image: url(../foris-images/canoe.jpg);
-// 		opacity: .2;
-// }
+input[type=email]:focus:not([readonly]){
+	border-bottom: white !important;
+	border-color: white;
+}
