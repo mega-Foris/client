@@ -3,9 +3,24 @@
 $(document).ready(function(){
   //adds event listener for person creation form
   submitLoginForm()
+  navShowHideUser()
   submitPersonForm();
    $('.modal').modal();
 });
+
+function navShowHideUser(){
+  console.log('local storage');
+  console.log(localStorage.id);
+  if (localStorage.id == undefined){
+    console.log('LS is true');
+    $('.notloggedin').show()
+    $('.loggedin').hide()
+  }else{
+    console.log('LS not true');
+    $('.loggedin').show()
+    $('.notloggedin').hide()
+  }
+}
 
 function redirectIfLoggedIn(){
   if(localStorage.id){

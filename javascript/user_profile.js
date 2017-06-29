@@ -24,6 +24,8 @@ function getUserInfo(id){
 	return callAPI(options);
 }
 
+//
+
 function appendUserInfo(response){
   let response_array = [];
   response_array.push(response);

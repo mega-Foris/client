@@ -1,7 +1,13 @@
 
 $(document).ready(function(){
 	datePicker();
-
+	console.log('here!');
+	console.log(localStorage.id);
+	$('.directToUserProfile').on('click', function(){
+		console.log('yeah?');
+		let id = localStorage.id
+	  window.location.href = `./user_profile.html?id=${id}`;
+	});
 	//upon loading, bring in three sample events for home page
 	let URL = prepareRequest('api/v1/events');
 	//callAPI(URL).then(showEvents);

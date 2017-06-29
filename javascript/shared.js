@@ -79,3 +79,9 @@ function getHostURL() {
     window.location = `/user.html?id=${localStorage.user_id}`
   }
 }
+
+function logout(){
+
+	localStorage.clear();
+
+}
