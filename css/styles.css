@@ -276,12 +276,19 @@ input[type=email]:focus:not([readonly]) {
   background-color: #443728 !important; }
 
 .picker__day.picker__day--today {
-  color: black !important; }
+  color: red !important; }
 
 .picker__nav--prev:hover, .picker__nav--next:hover {
   background: #947857; }
 
 button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
   background-color: #947857; }
+
+.modal-content {
+  background-color: #544431;
+  border-bottom: color-text; }
+
+.modal-footer {
+  background-color: #443728 !important; }
 
 /*# sourceMappingURL=styles.css.map */
