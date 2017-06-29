@@ -36,7 +36,8 @@ function submitPersonForm() {
         localStorage.token = result.token;
         localStorage.id = result.id[0].id;
         // localStarage.user_id = result.id;
-        alert('Sign-up Successful!')
+        alert('Sign-up Successful!');
+        window.location = '/index.html';
       });
     });
   })
@@ -59,7 +60,8 @@ function submitLoginForm() {
           console.log(result.person.id);
           localStorage.token = result.token;
           localStorage.id = result.person.id;
-          alert('Login Successful!')
+          alert('Login Successful!');
+          window.location = '/index.html';
         });
       });
   })      //console.log("called?");
