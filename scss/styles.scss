@@ -1,5 +1,3 @@
-//Imports//
-//Variables//
 $color-base: #443728;
 $color-text: white;
 
@@ -50,7 +48,7 @@ main {
 }
 .darken-1{
 	background-color: $color-base;
-	opacity: 0.7;
+	opacity: 0.85;
 }
 .search-btn{
 	background-color: white;
@@ -78,8 +76,9 @@ main {
 }
 .about-card{
 	background-color: $color-base;
-	opacity: 0.7;
+	opacity: 0.9;
 	margin-top: 5em;
+	padding-bottom: 2em;
 }
 .script{
 	overflow: scroll;
@@ -220,32 +219,55 @@ h6{
 }
 
 /* label color */
-	.input-field label {
-		color: #ffffff;
-	}
-	/* label focus color */
-	.input-field input[type=text]:focus + label {
-		color: #ffffff;
-	}
-	/* label underline focus color */
-	.input-field .date input[type=text]:focus {
-		border-bottom: 1px solid #ffffff;
-		box-shadow: 0 1px 0 0 #ffffff;
-	}
-	/* valid color */
-	.input-field input[type=text].valid {
-		border-bottom: 1px solid #ffffff;
-		box-shadow: 0 1px 0 0 #ffffff;
-	}
-	/* invalid color */
-	.input-field input[type=text].invalid {
-		border-bottom: 1px solid #ffffff;
-		box-shadow: 0 1px 0 0 #ffffff;
-	}
-	/* icon prefix focus color */
-	.input-field .prefix.active {
-		color: #ffffff;
-	}
-	h4{
-		text-align: center;
-	}
+.input-field:focus + label {
+	color: #ffffff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #ffffff;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* valid color */
+.input-field input[type=text]:focus.valid {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* invalid color */
+.input-field input[type=text]:focus.invalid {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #ffffff;
+}
+input[type=date]:focus:not([readonly]){
+	border-bottom: $color-text;
+	color: $color-text;
+}
+h4{
+	text-align: center;
+}
+span {
+	color: $color-base !important;
+}
+label{
+	color: $color-text !important;
+}
+#login{
+	margin-right:1em;
+}
+.login-body{
+	@extend body;
+	background-image: url(../foris-images/girl-tent.jpg);
+}
+
+// .event-profile-body{
+// 	@extend body;
+// 	background-image: url(../foris-images/canoe.jpg);
+// 		opacity: .2;
+// }
