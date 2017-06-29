@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   //adds event listener for person creation form
   submitLoginForm()
@@ -5,6 +7,11 @@ $(document).ready(function(){
    $('.modal').modal();
 });
 
+function redirectIfLoggedIn(){
+  if(localStorage.id){
+    window.location = '/index.html'
+  }
+}
 //user profile creation
 function submitPersonForm() {
     //console.log("called?");
@@ -27,6 +34,7 @@ function submitPersonForm() {
 			}).then( result=> {
         console.log(result);
         localStorage.token = result.token;
+        localStorage.id = result.id[0].id;
         // localStarage.user_id = result.id;
         alert('Sign-up Successful!')
       });
@@ -44,12 +52,13 @@ function submitLoginForm() {
   				'email': email,
   				'password':password
         };
-        console.log(personObject);
         $.post('http://localhost:3000/auth/login', personObject, function(personObject){
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);
-          localStorage.token = result.token
+          console.log(result.person.id);
+          localStorage.token = result.token;
+          localStorage.id = result.person.id;
           alert('Login Successful!')
         });
       });
