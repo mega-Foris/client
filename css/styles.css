@@ -265,10 +265,20 @@ input[type=email]:focus:not([readonly]) {
 .picker__date-display, .picker__weekday-display {
   background-color: #CCC; }
 
-.picker_close {
-  background-color: #443728; }
+.picker__close, .picker__today {
+  color: #443728 !important; }
 
 .main-event-creation {
   margin-top: 1em; }
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  color: white !important;
+  background-color: #443728 !important; }
+
+.picker__day.picker__day--today {
+  color: black !important; }
+
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  background: #947857; }
 
 /*# sourceMappingURL=styles.css.map */

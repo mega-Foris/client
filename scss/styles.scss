@@ -286,9 +286,19 @@ input[type=email]:focus:not([readonly]){
 .picker__date-display, .picker__weekday-display{
     background-color: #CCC;
 }
-.picker_close{
-		background-color: $color-base;
+.picker__close, .picker__today{
+	color: $color-base !important;
 }
 .main-event-creation{
 	margin-top: 1em;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+	color: $color-text !important;
+	background-color: $color-base !important;
+}
+.picker__day.picker__day--today{
+	color: black !important;
+}
+.picker__nav--prev:hover, .picker__nav--next:hover{
+	background: lighten($color-base, 25%);
 }
