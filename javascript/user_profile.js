@@ -39,7 +39,7 @@ function appendUserInfo(response){
 function appendCoverPhoto(response){
   let sport = response.attributes[2].value;
   let cover = getCoverPhoto(sport);
-  let html = `<img src=${cover} alt="Add your favorite sport" id="cover-photo" class="activator">`;
+  let html = `<img src=${cover} alt="Add your favorite sport" id="cover-photo profile-cover" class="">`;
   //<img class="activator" src="http://static.vecteezy.com/system/resources/previews/000/094/491/original/polygonal-texture-background-vector.jpg" alt="user background">
   $('.cover-photo-container').append(html);
 }
@@ -49,9 +49,11 @@ function getCoverPhoto(sport){
     cover = '../foris-images/hiking-guy.jpg';
   }else if (sport=='kayaking'){
     cover = '../foris-images/kayak1.jpg';
-  }else {
-    cover = '../foris-images/guy-tent.jpg';
-  }
+  }else if (sport == 'biking'){
+    cover = '../foris-images/mountain-biking.jpg';
+  } else {
+		cover = '../foris-images/climbing-cover.jpg';
+	}
   return cover;
 }
 
