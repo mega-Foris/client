@@ -281,4 +281,7 @@ input[type=email]:focus:not([readonly]) {
 .picker__nav--prev:hover, .picker__nav--next:hover {
   background: #947857; }
 
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+  background-color: #947857; }
+
 /*# sourceMappingURL=styles.css.map */
