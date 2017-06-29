@@ -167,7 +167,7 @@ h6 {
   color: white; }
 
 #profile-page-header .card-image {
-  max-height: 225px;
+  max-height: 500px;
   background-size: cover; }
 
 #profile-page-header .card-profile-image img {
@@ -290,5 +290,26 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .modal-footer {
   background-color: #443728 !important; }
+
+input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important; }
+
+.sign-up {
+  margin: 2em !important;
+  font-size: 1.5em; }
+
+.login-card {
+  padding-bottom: 1em;
+  padding-top: 1em; }
+
+.circle {
+  border: 5px solid white; }
+
+#profile-page-header {
+  margin-top: 2em; }
+
+.user-profile-body {
+  background-image: url(../foris-images/night-camp.png); }
 
 /*# sourceMappingURL=styles.css.map */
