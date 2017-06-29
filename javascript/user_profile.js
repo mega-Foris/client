@@ -1,17 +1,27 @@
+
+
 $(document).ready(function(){
   //parse query string to get id
   const user_id = handleQueryString(window.location.search);
 
   //call API and append data to the page
-  getUserInfo(user_id).then(appendUserInfo);
+  getUserInfo(user_id).then(appendUserInfo).catch((error) => {
+    console.log(error);
+  });
 
   //adding click handler to event cards to direct to event profiles
   $('.trip-container').on('click', '#event_profile_card', handleEventRequest);
 });//end document ready
 
 function getUserInfo(id){
-	let URL = prepareRequest(`api/v1/persons/${id}`);
-	return callAPI(URL);
+  // let URL = prepareRequest(`api/v1/persons/${id}`);
+  let options = {
+		url: prepareRequest(`api/v1/persons/${id}`),
+		headers: {
+			Authorization: `Bearer ${localStorage.token}`
+		}
+	};
+	return callAPI(options);
 }
 
 function appendUserInfo(response){
