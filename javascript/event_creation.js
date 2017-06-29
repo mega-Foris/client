@@ -4,6 +4,9 @@ $(document).ready(function(){
   submitEventForm();
 
    $('.modal').modal();
+	 $('input').click(()=>{
+		 $('input').removeClass('validate');
+	 });
 });
 
 //event creation
