@@ -27,6 +27,7 @@ function submitPersonForm() {
 			}).then( result=> {
         console.log(result);
         localStorage.token = result.token;
+        localStorage.id = result.id[0].id;
         // localStarage.user_id = result.id;
         alert('Sign-up Successful!')
       });
@@ -44,12 +45,13 @@ function submitLoginForm() {
   				'email': email,
   				'password':password
         };
-        console.log(personObject);
         $.post('http://localhost:3000/auth/login', personObject, function(personObject){
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);
-          localStorage.token = result.token
+          console.log(result.person.id);
+          localStorage.token = result.token;
+          localStorage.id = result.person.id;
           alert('Login Successful!')
         });
       });

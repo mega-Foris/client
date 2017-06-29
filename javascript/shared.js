@@ -1,3 +1,5 @@
+const API_URL = getHostURL()
+
 $(document).ready(function(){
 	//materialize initializers
 	$('select').material_select();
@@ -9,8 +11,12 @@ $(document).ready(function(){
 //prepares full URL based on query ending
 function prepareRequest(query){
   const heroku = 'https://forisevents.herokuapp.com/';
+	const local = 'http://localhost:3000/'
+
   const route_URL = query;
-  return heroku + route_URL;
+  // return heroku + route_URL;
+	// return local + route_URL;
+	return API_URL + route_URL;
 }
 
 //calls API with full URL
@@ -59,3 +65,11 @@ function getDifficultyImage(difficulty){
 	}
 	return image;
 }
+
+function getHostURL() {
+	 return 'http://localhost:3000/'
+  // if (window.location.host.indexOf('localhost') != -1) {
+  //   return 'http://localhost:3000/';
+  // } else {
+  //   return 'https://forisevents.herokuapp.com/';
+  }
