@@ -1,4 +1,4 @@
-body, .main-body, .about, .login-body {
+body, .main-body, .event-create-body, .about, .login-body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -8,7 +8,10 @@ body, .main-body, .about, .login-body {
   position: inherit; }
 
 .main-body {
-  background-image: url("../foris-images/hikingSplash.jpg"); }
+  background-image: url(../foris-images/hikingSplash.jpg); }
+
+.event-create-body {
+  background-image: url(../foris-images/sunset-hike.jpg); }
 
 main {
   flex: 1 0 auto; }
@@ -129,7 +132,8 @@ ul {
   float: left;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .user-facts {
   border: 1px solid black;
@@ -138,7 +142,8 @@ ul {
   float: right;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .event-comments {
   border: 1px solid black;
@@ -146,7 +151,8 @@ ul {
   width: 96%;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .comment-title {
   text-align: center; }
@@ -226,8 +232,9 @@ h6 {
 .input-field .prefix.active {
   color: #ffffff; }
 
-input[type=date]:focus:not([readonly]) {
+input[type=email]:focus:not([readonly]) {
   border-bottom: white;
+  box-shadow: white;
   color: white; }
 
 h4 {
@@ -244,5 +251,44 @@ label {
 
 .login-body {
   background-image: url(../foris-images/girl-tent.jpg); }
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: white !important;
+  border-color: white; }
+
+.event-profile-body {
+  background-image: url(../foris-images/mountain-background-transparent.png); }
+
+.picker__box {
+  background-color: #CCC; }
+
+.picker__date-display, .picker__weekday-display {
+  background-color: #CCC; }
+
+.picker__close, .picker__today {
+  color: #443728 !important; }
+
+.main-event-creation {
+  margin-top: 1em; }
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  color: white !important;
+  background-color: #443728 !important; }
+
+.picker__day.picker__day--today {
+  color: red !important; }
+
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  background: #947857; }
+
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+  background-color: #947857; }
+
+.modal-content {
+  background-color: #544431;
+  border-bottom: color-text; }
+
+.modal-footer {
+  background-color: #443728 !important; }
 
 /*# sourceMappingURL=styles.css.map */

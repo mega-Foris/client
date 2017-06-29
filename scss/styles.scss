@@ -12,7 +12,11 @@ body {
 }
 .main-body{
 	@extend body;
-	background-image: url("../foris-images/hikingSplash.jpg");
+	background-image: url(../foris-images/hikingSplash.jpg);
+}
+.event-create-body{
+	@extend body;
+	background-image: url(../foris-images/sunset-hike.jpg)
 }
 main {
 	flex: 1 0 auto;
@@ -142,6 +146,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .user-facts{
 	border: 1px solid black;
@@ -151,6 +156,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .event-comments{
 	border: 1px solid black;
@@ -159,6 +165,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .comment-title{
 	text-align: center;
@@ -245,8 +252,9 @@ h6{
 .input-field .prefix.active {
 	color: #ffffff;
 }
-input[type=date]:focus:not([readonly]){
+input[type=email]:focus:not([readonly]){
 	border-bottom: $color-text;
+	box-shadow: $color-text;
 	color: $color-text;
 }
 h4{
@@ -265,9 +273,42 @@ label{
 	@extend body;
 	background-image: url(../foris-images/girl-tent.jpg);
 }
-
-// .event-profile-body{
-// 	@extend body;
-// 	background-image: url(../foris-images/canoe.jpg);
-// 		opacity: .2;
-// }
+input[type=email]:focus:not([readonly]){
+	border-bottom: white !important;
+	border-color: white;
+}
+.event-profile-body{
+	background-image: url(../foris-images/mountain-background-transparent.png);
+}
+.picker__box{
+    background-color: #CCC;
+}
+.picker__date-display, .picker__weekday-display{
+    background-color: #CCC;
+}
+.picker__close, .picker__today{
+	color: $color-base !important;
+}
+.main-event-creation{
+	margin-top: 1em;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+	color: $color-text !important;
+	background-color: $color-base !important;
+}
+.picker__day.picker__day--today{
+	color: red !important;
+}
+.picker__nav--prev:hover, .picker__nav--next:hover{
+	background: lighten($color-base, 25%);
+}
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+	background-color: lighten($color-base, 25%);
+}
+.modal-content{
+	background-color: lighten($color-base, 5%);
+	border-bottom: color-text;
+}
+.modal-footer{
+	background-color: $color-base !important;
+}
