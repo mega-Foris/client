@@ -12,7 +12,11 @@ body {
 }
 .main-body{
 	@extend body;
-	background-image: url("../foris-images/hikingSplash.jpg");
+	background-image: url(../foris-images/hikingSplash.jpg);
+}
+.event-create-body{
+	@extend body;
+	background-image: url(../foris-images/sunset-hike.jpg)
 }
 main {
 	flex: 1 0 auto;
@@ -142,6 +146,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .user-facts{
 	border: 1px solid black;
@@ -151,6 +156,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .event-comments{
 	border: 1px solid black;
@@ -159,6 +165,7 @@ ul{
 	height: 20em;
 	margin: 2em;
 	padding-left: 1em;
+	background-color: $color-text;
 }
 .comment-title{
 	text-align: center;
@@ -269,4 +276,19 @@ label{
 input[type=email]:focus:not([readonly]){
 	border-bottom: white !important;
 	border-color: white;
+}
+.event-profile-body{
+	background-image: url(../foris-images/mountain-background-transparent.png);
+}
+.picker__box{
+    background-color: #CCC;
+}
+.picker__date-display, .picker__weekday-display{
+    background-color: #CCC;
+}
+.picker_close{
+		background-color: $color-base;
+}
+.main-event-creation{
+	margin-top: 1em;
 }

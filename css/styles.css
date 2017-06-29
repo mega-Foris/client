@@ -1,4 +1,4 @@
-body, .main-body, .about, .login-body {
+body, .main-body, .event-create-body, .about, .login-body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -8,7 +8,10 @@ body, .main-body, .about, .login-body {
   position: inherit; }
 
 .main-body {
-  background-image: url("../foris-images/hikingSplash.jpg"); }
+  background-image: url(../foris-images/hikingSplash.jpg); }
+
+.event-create-body {
+  background-image: url(../foris-images/sunset-hike.jpg); }
 
 main {
   flex: 1 0 auto; }
@@ -129,7 +132,8 @@ ul {
   float: left;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .user-facts {
   border: 1px solid black;
@@ -138,7 +142,8 @@ ul {
   float: right;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .event-comments {
   border: 1px solid black;
@@ -146,7 +151,8 @@ ul {
   width: 96%;
   height: 20em;
   margin: 2em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  background-color: white; }
 
 .comment-title {
   text-align: center; }
@@ -249,5 +255,20 @@ label {
 input[type=email]:focus:not([readonly]) {
   border-bottom: white !important;
   border-color: white; }
+
+.event-profile-body {
+  background-image: url(../foris-images/mountain-background-transparent.png); }
+
+.picker__box {
+  background-color: #CCC; }
+
+.picker__date-display, .picker__weekday-display {
+  background-color: #CCC; }
+
+.picker_close {
+  background-color: #443728; }
+
+.main-event-creation {
+  margin-top: 1em; }
 
 /*# sourceMappingURL=styles.css.map */
