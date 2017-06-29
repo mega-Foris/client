@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   //adds event listener for person creation form
   submitLoginForm()
@@ -5,6 +7,11 @@ $(document).ready(function(){
    $('.modal').modal();
 });
 
+function redirectIfLoggedIn(){
+  if(localStorage.id){
+    window.location = '/index.html'
+  }
+}
 //user profile creation
 function submitPersonForm() {
     //console.log("called?");
