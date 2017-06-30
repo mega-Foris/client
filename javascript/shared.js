@@ -16,7 +16,7 @@ function prepareRequest(query){
   const route_URL = query;
   // return heroku + route_URL;
 	// return local + route_URL;
-	return local + route_URL;
+	return heroku + route_URL;
 }
 
 //calls API with full URL
@@ -67,7 +67,7 @@ function getDifficultyImage(difficulty){
 }
 
 function getHostURL() {
-	 return 'http://localhost:3000/'
+	 return 'https://forisevents.herokuapp.com/'
   // if (window.location.host.indexOf('localhost') != -1) {
   //   return 'http://localhost:3000/';
   // } else {
