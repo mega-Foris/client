@@ -3,9 +3,21 @@
 $(document).ready(function(){
   //adds event listener for person creation form
   submitLoginForm()
+  navShowHideUser()
   submitPersonForm();
    $('.modal').modal();
 });
+
+function navShowHideUser(){
+  if (localStorage.id == undefined){
+    console.log('LS is true')
+    $('.notloggedin').show()
+    $('.loggedin').hide()
+  }else{
+    $('.loggedin').show()
+    $('.notloggedin').hide()
+  }
+}
 
 function redirectIfLoggedIn(){
   if(localStorage.id){
@@ -57,9 +69,10 @@ function submitLoginForm() {
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);
-          console.log(result.person.id);
+          console.log(result.person);
           localStorage.token = result.token;
           localStorage.id = result.person.id;
+          localStorage.name = result.person.name
           alert('Login Successful!');
           window.location = '/index.html';
         });
