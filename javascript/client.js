@@ -9,7 +9,7 @@ $(document).ready(function(){
 	  window.location.href = `./user_profile.html?id=${id}`;
 	});
 
-	$( ".namelogged" ).append(`${localStorage.id}`);
+	$( ".namelogged" ).append(`${localStorage.name}`);
 	//upon loading, bring in three sample events for home page
 	let URL = prepareRequest('api/v1/events');
 	//callAPI(URL).then(showEvents);
