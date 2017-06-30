@@ -68,30 +68,33 @@
           <div class="col s12 m6 l4">
             <select class="drop-down-selection">
               <option value="" disabled selected>Choose Desired Sport</option>
-              <option class="sport" value="1">Kayak</option>
-              <option class="sport" value="2">Climb</option>
-              <option class="sport" value="3">Bike</option>
-              <option class="sport" value="4">Hike</option>
+              <option class="sport" value="Kayak">Kayak</option>
+              <option class="sport" value="Climb">Climb</option>
+              <option class="sport" value="Bike">Bike</option>
+              <option class="sport" value="Hike">Hike</option>
             </select>
           </div>
 
           <div class="col s12 m6 l4">
             <select class="drop-down-selection-2">
               <option class = "selction-item" value="" disabled selected>Difficulty of Event</option>
-              <option class = "selction-item difficulty" value="1">Beginner</option>
-              <option class = "selction-item difficulty" value="2">Intermediate</option>
-              <option class = "selction-item difficulty" value="3">Advance</option>
+              <option class = "selction-item difficulty" value="Beginner">Beginner</option>
+              <option class = "selction-item difficulty" value="Intermediate">Intermediate</option>
+              <option class = "selction-item difficulty" value="Advance">Advance</option>
             </select>
           </div>
           <div class="col s12 m6 l4">
             <select class="drop-down-selection-3">
               <option class = "selction-item white-text" value="" disabled selected>Estimated Duration</option>
-              <option class = "selction-item" value="1">1-2 hrs</option>
-              <option class = "selction-item" value="2">3-4 hrs</option>
-              <option class = "selction-item" value="3">5+ hrs</option>
+              <option class = "selction-item duration" value="1-2 hrs">1-2 hrs</option>
+              <option class = "selction-item duration" value="3-4 hrs">3-4 hrs</option>
+              <option class = "selction-item duration" value="5+ hrs">5+ hrs</option>
             </select>
           </div>
           <div class="row container">
+            <!-- <p>Date:
+              <input type="text" id="datepicker" />
+            </p> -->
             <div class = "col s6">
               <label class="white-text time-from" for="from_date">From:</label>
               <input type="date" class="white-text datepicker">
@@ -110,12 +113,12 @@
           <div class="row">
            <div class="input-field col s12">
              <textarea id="textarea1" class="event-description materialize-textarea description white-text"></textarea>
-             <label class="white-text capacity" for="textarea1 white-text">Description of event</label>
+             <label class="white-text de capacity" for="textarea1 white-text">Description of event</label>
            </div>
          </div>
 
           <div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button id= 'createEvent' class="btn waves-effect waves-light" type="submit" name="action">Submit
 				    <i class="material-icons right">send</i>
 				  	</button>
           </div>
@@ -188,6 +191,7 @@
     </footer>
 
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./javascript/event_creation.js" charset="utf-8"></script>
