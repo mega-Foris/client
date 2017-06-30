@@ -1,8 +1,5 @@
-//Imports//
-//Variables//
 $color-base: #443728;
 $color-text: white;
-
 
 body {
 	display: flex;
@@ -15,7 +12,11 @@ body {
 }
 .main-body{
 	@extend body;
-	background-image: url("../foris-images/hikingSplash.jpg");
+	background-image: url(../foris-images/hikingSplash.jpg);
+}
+.event-create-body{
+	@extend body;
+	background-image: url(../foris-images/sunset-hike.jpg)
 }
 main {
 	flex: 1 0 auto;
@@ -26,6 +27,7 @@ main {
 .main-nav{
 	background-color: $color-base;
 	justify-content: center;
+	min-height: 4.5em;
 }
 .main-footer{
 	background-color: $color-base;
@@ -40,11 +42,8 @@ main {
 .sport-button{
 	margin-right: 2em;
 }
-.brand-logo{
-	// margin-left: 1em;
-}
 .login-button{
-	float:right;
+	float: right;
 }
 .search-card{
 	display: flex;
@@ -53,13 +52,18 @@ main {
 }
 .darken-1{
 	background-color: $color-base;
-	opacity: 0.7;
+	opacity: 0.85;
 }
 .search-btn{
-	background-color: #686866;
+	background-color: white;
+	color: $color-base;
 	opacity: 1;
 	margin-left: 1em;
 	margin-bottom: 1em;
+	&:hover{
+		background-color: $color-base;
+		color: white;
+	}
 }
 .trip-card{
 	z-index: -10;
@@ -76,8 +80,9 @@ main {
 }
 .about-card{
 	background-color: $color-base;
-	opacity: 0.7;
+	opacity: 0.9;
 	margin-top: 5em;
+	padding-bottom: 2em;
 }
 .script{
 	overflow: scroll;
@@ -87,8 +92,9 @@ main {
 }
 
 @media only screen and (min-width: 780px){
-	.brand-logo{
-		margin-left: 1em;
+	.logo-image-text{
+		display: flex;
+		justify-content: flex-end;
 	}
 }
 .drop-down-selection{
@@ -99,12 +105,19 @@ main {
 	color: $color-text;
 	margin-right: 3em;
 }
+.select-dropdown{
+	color: $color-text;
+}
 .logo-image{
-	max-width: 22%;
-	position: absolute;
+	max-width: 250px;
+	// position: absolute;
+	top: -2em;
+}
+.logo-image-text{
+	max-width: 150px;
+	// position: absolute;
+	top: .3em;
 	left: 1em;
-	top: -4em;
-	border-radius: 5px solid black;
 }
 .main-splash{
 	display: flex;
@@ -112,8 +125,235 @@ main {
 	align-items: center;
 	align-content: center;
 }
-.carousel-slider{
-	max-height: 60vh;
-	max-width: 90vw;
-	margin-top: 3em;
+.carousel .carousel-item {
+	width: 450px !important;
+}
+.event-facts{
+	border: 1px solid black;
+	display: flex;
+	// display: inline-block;
+	max-width: 50%;
+}
+ul{
+	margin: 2em;
+	padding-bottom: 2em;
+}
+.trip-info{
+	border: 1px solid black;
+	display: grid;
+	width: 45%;
+	float: left;
+	height: 20em;
+	margin: 2em;
+	padding-left: 1em;
+	background-color: $color-text;
+}
+.user-facts{
+	border: 1px solid black;
+	display: grid;
+	width: 45%;
+	float: right;
+	height: 20em;
+	margin: 2em;
+	padding-left: 1em;
+	background-color: $color-text;
+}
+.event-comments{
+	border: 1px solid black;
+	display: grid;
+	width: 96%;
+	height: 20em;
+	margin: 2em;
+	padding-left: 1em;
+	background-color: $color-text;
+}
+.comment-title{
+	text-align: center;
+}
+h6{
+	font-size: 18px;
+}
+.capacity{
+	color: $color-text;
+}
+.label{
+	color: white;
+}
+
+#profile-page-header .card-image {
+  max-height: 500px;
+	background-size: cover;
+	// position: fixed;
+}
+#profile-page-header .card-profile-image img {
+  width: 110px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#textarea1:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white;
+}
+
+#textarea1:focus + label {
+  color: white;
+}
+.submit-btn{
+	background-color: $color-text;
+}
+.btn, .btn-large{
+	background-color: $color-text;
+	color: $color-base;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	&:hover{
+		background-color: $color-base;
+		color: white;
+	}
+	&:active{
+		background-color: $color-base;
+		color: white;
+	}
+	&:focus{
+		background-color:$color-text;
+		color: $color-base;
+	}
+}
+
+/* label color */
+.input-field:focus + label {
+	color: #ffffff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #ffffff;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* valid color */
+.input-field input[type=text]:focus.valid {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* invalid color */
+.input-field input[type=text]:focus.invalid {
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0 1px 0 0 #ffffff;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #ffffff;
+}
+input[type=email]:focus:not([readonly]){
+	border-bottom: $color-text;
+	box-shadow: $color-text;
+	color: $color-text;
+}
+h4{
+	text-align: center;
+}
+span {
+	color: $color-base !important;
+}
+label{
+	color: $color-text !important;
+}
+#login{
+	margin-right:1em;
+}
+.login-body{
+	@extend body;
+	background-image: url(../foris-images/girl-tent.jpg);
+}
+input[type=email]:focus:not([readonly]){
+	border-bottom: white !important;
+	border-color: white;
+}
+.event-profile-body{
+	background-image: url(../foris-images/mountain-background-transparent.png);
+}
+.picker__box{
+    background-color: #CCC;
+}
+.picker__date-display, .picker__weekday-display{
+    background-color: #CCC;
+}
+.picker__close, .picker__today{
+	color: $color-base !important;
+}
+.main-event-creation{
+	margin-top: 1em;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+	color: $color-text !important;
+	background-color: $color-base !important;
+}
+.picker__day.picker__day--today{
+	color: red !important;
+}
+.picker__nav--prev:hover, .picker__nav--next:hover{
+	background: lighten($color-base, 25%);
+}
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+	background-color: lighten($color-base, 25%);
+}
+.modal-content{
+	background-color: lighten($color-base, 5%);
+	border-bottom: color-text;
+}
+.modal-footer{
+	background-color: $color-base !important;
+}
+input[type=password]:focus:not([readonly]){
+	border-bottom: 1px solid white !important;
+	box-shadow: 0 1px 0 0 white !important;
+}
+.sign-up{
+	margin: 2em !important;
+	font-size: 1.5em;
+}
+.login-card{
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+.circle{
+	border: 5px solid white;
+}
+#profile-page-header{
+	margin-top: 2em;
+}
+.user-profile-body{
+	background-image: url(../foris-images/night-camp.png);
+}
+.adding-button{
+	background-color: $color-base;
+	color:$color-text;
+	margin-left: 1em;
+	margin-right: 1.5em;
+}
+.user-facts{
+	overflow: scroll;
+}
+
+.event-comments{
+	overflow: scroll;
+}
+.event-comments{
+	top:-3em;
+}
+
+.comments-list{
+	margin-top:0;
+}
+
+i.left{
+	margin-right:0;
 }

@@ -14,39 +14,122 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-	<body>
+	<body class="event-profile-body">
 		<header>
 			<nav>
 		    <div class="nav-wrapper col s12 main-nav">
 		      <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
-					<a href="#!" class="brand-logo">Foris<span class="hide-on-med-and-down"></span></a>
-					<a href="#!" class="brand-logo"><span class="show-on-med-and-down"></span>Foris</a>
-		      <ul id="nav-mobile" class="nav-buttons right hide-on-med-and-down">
-		        <li class="sport-button"><a href="index.html">Browse</a></li>
+					<!-- <a href="#!" class="brand-logo">Foris<span class="hide-on-med-and-down"></span></a> -->
+					<!-- <a href="#!" class="brand-logo"><span class="show-on-med-and-down"></span>Foris</a> -->
+					<a href="index.html"><img src="foris-images/foris-logo-text.svg" class="brand-logo logo-image-text"/></a>
+
+		      <ul id="nav-mobile" class="nav-buttons center hide-on-med-and-down">
+		        <li class="sport-button"><a href="index.html">Home</a></li>
 		        <li class="sport-button"><a href="about.html">About</a></li>
-		        <li class="sport-button"><a href="collapsible.html">Contact</a></li>
-						<li class="login-button"><a href="collapsible.html">Login/Singup</a></li>
+		        <li class="sport-button"><a href="event_profile.html">Events</a></li>
+						<li class="sport-button"><a href="event_creation.html">Create Event!</a></li>
+						<li class="login-button"><a href="login.html">Login/Signup</a></li>
 					</ul>
+
 					<ul id="slide-out" class="side-nav">
 						<li><a href="about.html">About</a></li>
 						<li><a href="#">Search Trips</a></li>
 					</ul>
 		    </div>
 	  	</nav>
-			<!-- <img src="foris-images/foris-logo.svg" class="logo-image"/> -->
+			<!-- <a href="index.html"><img src="foris-images/foris-logo-text.svg" class="logo-image-text"/><span class="hide-on-med-and-down"></span></a> -->
+			<!-- <a href="index.html"><span class="show-on-med-and-down"><img src="foris-images/foris-logo-text.svg" class="logo-image-text"/></span></a> -->
 		</header>
 
 
 		<main>
 			<section class="main-splash">
-				<div class="carousel carousel-slider">
-					<a class="carousel-item" href="#one!"><img src="foris-images/canoe.jpg"></a>
-					<a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-					<a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-					<a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
-				</div>
+				<div class="carousel">
+			    <a class="carousel-item" href="#one!"><img src="./foris-images/girl-tent.jpg"></a>
+			    <a class="carousel-item" href="#two!"><img src="./foris-images/kayak1.jpg"></a>
+			    <a class="carousel-item" href="#three!"><img src="./foris-images/kayak1.jpg"></a>
+			    <a class="carousel-item" href="#four!"><img src="./foris-images/kayak1.jpg"></a>
+			    <a class="carousel-item" href="#five!"><img src="./foris-images/kayak1.jpg"></a>
+			  </div>
 			</section>
+
+
+			<div class="left-container col s12">
+				<section class="trip-info">
+					<h4 class="trip-details-title"><i class="small material-icons">navigation</i>Trip Details:</h4>
+					<h6 id='location'><i class="small material-icons">location_on</i></h6>
+					<h6 id='date'><i class="small material-icons">today</i></h6>
+					<h6 id='activity'><i class="small material-icons">description</i></h6>
+					<h6 id='difficulty'><i class="small material-icons">warning</i></h6>
+				</section>
+			</div>
+
+			<div class="right-container col s12">
+				<section class="user-facts">
+					<h4 class="user-title"><i class="small material-icons">perm_identity</i>Attendees: </h4>
+          <a class="waves-effect waves-light btn #443728 adding-button" id="add-attendee"><i class="material-icons left">add</i>Join Event!</a>
+          <ul class="user-facts-list">
+
+          </ul>
+        </section>
+			</div>
+			<div class="comment-container col s12">
+				<section class="event-comments">
+					<h4 class="comment-title"><i class="small material-icons">chat_bubble</i>Comments:</h4>
+            <div class="row">
+              <div class="col s6">
+                Add your comment here:
+                <div class="input-field inline">
+                  <input id="comment-field" type="text">
+                </div>
+              </div>
+                <a class="waves-effect waves-light btn #443728 adding-button col s4" id="add-comment"><i class="material-icons left">add</i>Add a comment</a>
+            </div>
+          <ul class="comments-list">
+          </ul>
+				</section>
+			</div>
 		</main>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6">
+								<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+								<label  for="first_name">First Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="last_name" type="text" class="validate">
+								<label for="last_name">Last Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="password" type="password" class="validate">
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="email" type="email" class="validate">
+								<div class="row">
+									<label for="email">Email</label>
+								</div>
+								<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+								<button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
 
 		<footer class="main-footer">
 			<div class="container">
@@ -66,9 +149,18 @@
 		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-		<script type="text/javascript" src="../javascript/client.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../javascript/shared.js" charset="utf-8"></script>
-    <script id="event-template" type="text/x-handlebars-template"></script>
-
+    <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./javascript/event_profile.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./javascript/person_creation.js" charset="utf-8"></script>
+		<script id="attendee-template" type="text/x-handlebars-template">
+		 {{#each people}}
+				<li class="script flow-text" id="user-name" data-id={{id}}>{{first_name}}</li>
+     {{/each}}
+	 </script>
+	 <script id="comment-template" type="text/x-handlebars-template">
+		{{#each comment}}
+			 <li class="script flow-text">{{comment}}</li>
+		 {{/each}}
+	</script>
   </body>
 </html>

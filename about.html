@@ -9,24 +9,49 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="./css/styles.css">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
 	<body class="about">
-		<nav>
-	    <div class="nav-wrapper main-nav">
-	      <a href="#" class="brand-logo">Foris</a>
-	      <ul id="nav-mobile" class="hide-on-med-and-down right nav-buttons">
-	        <li class="sport-button"><a href="index.html">Browse</a></li>
-	        <li class="sport-button"><a href="about.html">About</a></li>
-	        <li class="sport-button"><a href="event_profile.html">Contact</a></li>
-					<li class="login-button"><a href="collapsible.html">Login/Singup</a></li>
-				</ul>
-	    </div>
-  	</nav>
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a class="directToUserProfile" href="#">Profile</a></li>
+        <li><a href="#!" onclick="localStorage.clear(); location.reload()">Log Out</a></li>
+      </ul>
+			<nav>
+		    <div class="nav-wrapper col s12 main-nav">
+          <a href="index.html"><img src="foris-images/foris-logo-text.svg" class="brand-logo logo-image-text"/></a>
+					<!-- <img src="foris-images/foris-logo.svg" class="brand-logo logo-image"/> -->
+		      <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
+					<!-- <a href="#!" class="brand-logo">Foris<span class="hide-on-med-and-down"></span></a> -->
+					<!-- <a href="#!" class="brand-logo"><span class="show-on-med-and-down"></span>Foris</a> -->
+					<!-- <a href="index.html"><img src="foris-images/foris-logo-text.svg" class="brand-logo logo-image-text"/></a> -->
+		      <ul id="nav-mobile" class="nav-buttons center hide-on-med-and-down">
+		        <li class="sport-button"><a href="index.html">Home</a></li>
+		        <li class="sport-button"><a href="about.html">About</a></li>
+		        <!-- <li class="sport-button"><a href="event_profile.html">Events</a></li> -->
+            <li class="sport-button"><a href="event_creation.html">Create Event!</a></li>
+            <li><a class="loggedin namelogged dropdown-button" href="#!" data-activates="dropdown1">Welcome, <i class="material-icons right">arrow_drop_down</i></a></li>
+						<li class="notloggedin login-button"><a href="login.html">Login/Signup</a></li>
+            <!-- <li class="loggedin login-button"><a href="login.html">{{id}}</a></li> -->
+<!--
+            <ul id="dropdown1" class="dropdown-content login-button">
+              <li><a href="#!">Profile</a></li>
+              <li><a href="#!">Log Out</a></li>
+            </ul> -->
 
+						<!-- <button data-target="modal1" class="login-button btn" href="#modal1">Login/Singup</button> -->
+					</ul>
+					<ul id="slide-out" class="side-nav">
+						<li><a href="about.html">About</a></li>
+						<li><a href="#">Search Trips</a></li>
+						<button data-target="modal1" class="login-button btn" href="#modal1">Login/Singup</button>
+					</ul>
+		    </div>
+	  	</nav>
+		</header>
 		<main>
 			<!-- <div class="parallax-container">
 			 <div class="parallax"><img src="/foris-images/hikingSplash.jpg"></div>
@@ -41,32 +66,72 @@
 					</div>
 				</div>
 			</div>
-
-
-
 		</main>
 
-		<footer class="main-footer">
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6">
+								<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+								<label  for="first_name">First Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="last_name" type="text" class="validate">
+								<label for="last_name">Last Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="password" type="password" class="validate">
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="email" type="email" class="validate">
+								<div class="row">
+									<label for="email">Email</label>
+								</div>
+								<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+								<button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+
+
+
+
+    <footer class="main-footer">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
-						<h5 class="white-text">Footer Content</h5>
-						<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+						<h5 class="white-text">Team Mega-Foris Thanks You!</h5>
+						<p class="grey-text text-lighten-4">We hope your adventures are full of fun and memories!</p>
 					</div>
 					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text">Links</h5>
+						<!-- <h5 class="white-text">Dont look here... </h5> -->
 					</div>
 				</div>
-					<p class= "copyright-text">
-						© 2017 Copyright Mega Foris
-					</p>
+					<p class= "copyright-text">© 2017 Copyright Mega Foris</p>
 			</div>
 		</footer>
 
 		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-		<script type="text/javascript" src="../javascript/client.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./javascript/client.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./javascript/person_creation.js" charset="utf-8"></script>
+
 
   </body>
 </html>

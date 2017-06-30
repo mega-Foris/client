@@ -1,4 +1,4 @@
-body, .main-body, .about {
+body, .main-body, .event-create-body, .about, .login-body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -8,7 +8,10 @@ body, .main-body, .about {
   position: inherit; }
 
 .main-body {
-  background-image: url("../foris-images/hikingSplash.jpg"); }
+  background-image: url(../foris-images/hikingSplash.jpg); }
+
+.event-create-body {
+  background-image: url(../foris-images/sunset-hike.jpg); }
 
 main {
   flex: 1 0 auto; }
@@ -18,7 +21,8 @@ main {
 
 .main-nav {
   background-color: #443728;
-  justify-content: center; }
+  justify-content: center;
+  min-height: 4.5em; }
 
 .main-footer {
   background-color: #443728; }
@@ -43,13 +47,17 @@ main {
 
 .darken-1 {
   background-color: #443728;
-  opacity: 0.7; }
+  opacity: 0.85; }
 
 .search-btn {
-  background-color: #686866;
+  background-color: white;
+  color: #443728;
   opacity: 1;
   margin-left: 1em;
   margin-bottom: 1em; }
+  .search-btn:hover {
+    background-color: #443728;
+    color: white; }
 
 .trip-card {
   z-index: -10; }
@@ -65,8 +73,9 @@ main {
 
 .about-card {
   background-color: #443728;
-  opacity: 0.7;
-  margin-top: 5em; }
+  opacity: 0.9;
+  margin-top: 5em;
+  padding-bottom: 2em; }
 
 .script {
   overflow: scroll; }
@@ -75,8 +84,9 @@ main {
   padding-left: 1em; }
 
 @media only screen and (min-width: 780px) {
-  .brand-logo {
-    margin-left: 1em; } }
+  .logo-image-text {
+    display: flex;
+    justify-content: flex-end; } }
 .drop-down-selection {
   color: white;
   margin-right: 3em; }
@@ -85,12 +95,17 @@ main {
   color: white;
   margin-right: 3em; }
 
+.select-dropdown {
+  color: white; }
+
 .logo-image {
-  max-width: 22%;
-  position: absolute;
-  left: 1em;
-  top: -4em;
-  border-radius: 5px solid black; }
+  max-width: 250px;
+  top: -2em; }
+
+.logo-image-text {
+  max-width: 150px;
+  top: .3em;
+  left: 1em; }
 
 .main-splash {
   display: flex;
@@ -98,9 +113,224 @@ main {
   align-items: center;
   align-content: center; }
 
-.carousel-slider {
-  max-height: 60vh;
-  max-width: 90vw;
-  margin-top: 3em; }
+.carousel .carousel-item {
+  width: 450px !important; }
+
+.event-facts {
+  border: 1px solid black;
+  display: flex;
+  max-width: 50%; }
+
+ul {
+  margin: 2em;
+  padding-bottom: 2em; }
+
+.trip-info {
+  border: 1px solid black;
+  display: grid;
+  width: 45%;
+  float: left;
+  height: 20em;
+  margin: 2em;
+  padding-left: 1em;
+  background-color: white; }
+
+.user-facts {
+  border: 1px solid black;
+  display: grid;
+  width: 45%;
+  float: right;
+  height: 20em;
+  margin: 2em;
+  padding-left: 1em;
+  background-color: white; }
+
+.event-comments {
+  border: 1px solid black;
+  display: grid;
+  width: 96%;
+  height: 20em;
+  margin: 2em;
+  padding-left: 1em;
+  background-color: white; }
+
+.comment-title {
+  text-align: center; }
+
+h6 {
+  font-size: 18px; }
+
+.capacity {
+  color: white; }
+
+.label {
+  color: white; }
+
+#profile-page-header .card-image {
+  max-height: 500px;
+  background-size: cover; }
+
+#profile-page-header .card-profile-image img {
+  width: 110px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+#textarea1:focus {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white; }
+
+#textarea1:focus + label {
+  color: white; }
+
+.submit-btn {
+  background-color: white; }
+
+.btn, .btn-large {
+  background-color: white;
+  color: #443728;
+  margin-bottom: 1em;
+  margin-left: 1em; }
+  .btn:hover, .btn-large:hover {
+    background-color: #443728;
+    color: white; }
+  .btn:active, .btn-large:active {
+    background-color: #443728;
+    color: white; }
+  .btn:focus, .btn-large:focus {
+    background-color: white;
+    color: #443728; }
+
+/* label color */
+.input-field:focus + label {
+  color: #ffffff; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #ffffff; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* valid color */
+.input-field input[type=text]:focus.valid {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* invalid color */
+.input-field input[type=text]:focus.invalid {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #ffffff; }
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: white;
+  box-shadow: white;
+  color: white; }
+
+h4 {
+  text-align: center; }
+
+span {
+  color: #443728 !important; }
+
+label {
+  color: white !important; }
+
+#login {
+  margin-right: 1em; }
+
+.login-body {
+  background-image: url(../foris-images/girl-tent.jpg); }
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: white !important;
+  border-color: white; }
+
+.event-profile-body {
+  background-image: url(../foris-images/mountain-background-transparent.png); }
+
+.picker__box {
+  background-color: #CCC; }
+
+.picker__date-display, .picker__weekday-display {
+  background-color: #CCC; }
+
+.picker__close, .picker__today {
+  color: #443728 !important; }
+
+.main-event-creation {
+  margin-top: 1em; }
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  color: white !important;
+  background-color: #443728 !important; }
+
+.picker__day.picker__day--today {
+  color: red !important; }
+
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  background: #947857; }
+
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+  background-color: #947857; }
+
+.modal-content {
+  background-color: #544431;
+  border-bottom: color-text; }
+
+.modal-footer {
+  background-color: #443728 !important; }
+
+input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important; }
+
+.sign-up {
+  margin: 2em !important;
+  font-size: 1.5em; }
+
+.login-card {
+  padding-bottom: 1em;
+  padding-top: 1em; }
+
+.circle {
+  border: 5px solid white; }
+
+#profile-page-header {
+  margin-top: 2em; }
+
+.user-profile-body {
+  background-image: url(../foris-images/night-camp.png); }
+
+.adding-button {
+  background-color: #443728;
+  color: white;
+  margin-left: 1em;
+  margin-right: 1.5em; }
+
+.user-facts {
+  overflow: scroll; }
+
+.event-comments {
+  overflow: scroll; }
+
+.event-comments {
+  top: -3em; }
+
+.comments-list {
+  margin-top: 0; }
+
+i.left {
+  margin-right: 0; }
 
 /*# sourceMappingURL=styles.css.map */
