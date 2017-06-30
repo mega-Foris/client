@@ -17,11 +17,11 @@ function submitEventForm() {
       alert('YOU CLICKED IT!');
       event.preventDefault();
       let title = $('.title').val();
-      let sport = $('.sport').val();
-      var difficulty = $('.difficulty').val();
+      let sport = $('#sport-drop option:selected').val();
+      var difficulty = $('#difficulty-drop option:selected').val();
       let duration =$('.duration').val();
       let startDate = $('.datepicker').val();
-      let newDate = Date.parse('startDate', 'yyyy.MM.dd')
+      let newDate = moment(startDate).format('YYYY-MM-DD')
       console.log(newDate);
       let finishDate = $('.time-to').val();
       let capacity = $('.capacity').val();
@@ -30,13 +30,14 @@ function submitEventForm() {
         'title': title,
         'main_sport': sport,
         'difficulty': difficulty,
-        'date_time': '2017-08-01',
+        'date_time': newDate,
         'capacity': capacity,
         'duration': duration,
         'description': description,
         'organizer_id': localStorage.id
       };
       console.log(newDate);
+      console.log(eventObject);
       $.post('http://localhost:3000/api/v1/events/createEvent', eventObject, function(eventObject){
       console.log('Post that shit');
     }).then(result => {
