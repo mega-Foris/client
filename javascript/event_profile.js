@@ -35,6 +35,8 @@ function showAttendees(people){
     const source = $('#attendee-template').html();
     const template = Handlebars.compile(source);
     const html = template({people});
+    console.log(html);
+    console.log('that was peeps');
     $('.user-facts').append(html);
 }
 function showComments(comment){
@@ -73,11 +75,16 @@ function sendDatatoAPI(user_id, event_id){
 			Authorization: `Bearer ${localStorage.token}`
 		}
 	};
-  console.log(options);
+  //let URL = prepareRequest(`auth/add/id/${user_id}/eventid/${event_id}`);
+//  console.log(URL);
+console.log(options);
 	return postAPI(options);
+  //let URL = 'http://localhost:3000/auth/add/id/13/eventid/1';
+  //console.log(URL);
+//return   $.post(URL);
 }
 
-function postAPI(){
+function postAPI(URL){
   //calls API with full URL
   return $.post(URL);
 }
