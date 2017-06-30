@@ -41,7 +41,7 @@ function submitPersonForm() {
 				'email': email,
 				'password':password
       };
-      $.post('http://localhost:3000/auth/signup', personObject, function(personObject){
+      $.post('https://forisevents.herokuapp.com/auth/signup', personObject, function(personObject){
         console.log("Hey, POSTED!");
 			}).then( result=> {
         console.log(result);
@@ -70,7 +70,7 @@ function submitLoginForm() {
   				'email': email,
   				'password':password
         };
-        $.post('http://localhost:3000/auth/login', personObject, function(personObject){
+        $.post('https://forisevents.herokuapp.com/auth/login', personObject, function(personObject){
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);

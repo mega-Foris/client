@@ -38,7 +38,7 @@ function submitEventForm() {
       };
       console.log(newDate);
       console.log(eventObject);
-      $.post('http://localhost:3000/api/v1/events/createEvent', eventObject, function(eventObject){
+      $.post('https://forisevents.herokuapp.com/api/v1/events/createEvent', eventObject, function(eventObject){
       console.log('Post that shit');
     }).then(result => {
       console.log(result);
