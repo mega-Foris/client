@@ -19,11 +19,11 @@ function navShowHideUser(){
   }
 }
 
-function redirectIfLoggedIn(){
-  if(localStorage.id){
-    window.location = '/index.html'
-  }
-}
+// function redirectIfLoggedIn(){
+//   if(localStorage.id){
+//     window.location = '/index.html'
+//   }
+// }
 //user profile creation
 function submitPersonForm() {
     //console.log("called?");
@@ -45,8 +45,13 @@ function submitPersonForm() {
         console.log("Hey, POSTED!");
 			}).then( result=> {
         console.log(result);
+        console.log("result.id[0].id");
+        console.log(result.id[0].id);
+        console.log("result.id[0].name");
+        console.log(result.id[0].name);
         localStorage.token = result.token;
         localStorage.id = result.id[0].id;
+        localStorage.name = result.id[0].name
         // localStarage.user_id = result.id;
         alert('Sign-up Successful!');
         window.location = '/index.html';
@@ -69,10 +74,10 @@ function submitLoginForm() {
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);
-          console.log(result.person);
+          console.log(result.person.first_name);
           localStorage.token = result.token;
           localStorage.id = result.person.id;
-          localStorage.name = result.person.name
+          localStorage.name = result.person.first_name
           alert('Login Successful!');
           window.location = '/index.html';
         });
