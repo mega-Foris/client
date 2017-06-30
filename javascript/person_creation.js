@@ -9,14 +9,11 @@ $(document).ready(function(){
 });
 
 function navShowHideUser(){
-  console.log('local storage');
-  console.log(localStorage.id);
   if (localStorage.id == undefined){
-    console.log('LS is true');
+    console.log('LS is true')
     $('.notloggedin').show()
     $('.loggedin').hide()
   }else{
-    console.log('LS not true');
     $('.loggedin').show()
     $('.notloggedin').hide()
   }
@@ -72,9 +69,10 @@ function submitLoginForm() {
           console.log("Hey, POSTED!");
   			}).then( result=> {
           console.log(result);
-          console.log(result.person.id);
+          console.log(result.person);
           localStorage.token = result.token;
           localStorage.id = result.person.id;
+          localStorage.name = result.person.name
           alert('Login Successful!');
           window.location = '/index.html';
         });

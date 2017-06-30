@@ -8,6 +8,8 @@ $(document).ready(function(){
 		let id = localStorage.id
 	  window.location.href = `./user_profile.html?id=${id}`;
 	});
+
+	$( ".namelogged" ).append(`${localStorage.id}`);
 	//upon loading, bring in three sample events for home page
 	let URL = prepareRequest('api/v1/events');
 	//callAPI(URL).then(showEvents);
