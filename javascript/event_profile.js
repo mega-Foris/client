@@ -7,6 +7,10 @@ $(document).ready(function(){
 
   //add click handler to user name
   $('.user-facts').on('click', '#user-name', handleUserRequest);
+  //add click handler to 'add user' button
+  $('.user-facts').on('click', '#add-attendee',function(){
+  addUsertoEvent(event_id);
+  });
 });//end document ready
 
 function getEventInfo(id){
@@ -31,6 +35,8 @@ function showAttendees(people){
     const source = $('#attendee-template').html();
     const template = Handlebars.compile(source);
     const html = template({people});
+    console.log(html);
+    console.log('that was peeps');
     $('.user-facts').append(html);
 }
 function showComments(comment){
@@ -59,4 +65,39 @@ function displayDifficulty(difficulty){
  <img src=${img} height="25px" width = "25px" alt = ''>
  `;
  return template;
+}
+
+function addUsertoEvent(event_id){
+  //get token user id
+  let user_id = localStorage.id;
+  sendDatatoAPI(user_id, event_id).then(refreshPage);
+  //insert into person-eventtable
+  //re-load page
+}
+
+function sendDatatoAPI(user_id, event_id){
+  let options = {
+		url: prepareRequest(`auth/add/id/${user_id}/eventid/${event_id}`),
+		headers: {
+			Authorization: `Bearer ${localStorage.token}`
+		}
+	};
+  //let URL = prepareRequest(`auth/add/id/${user_id}/eventid/${event_id}`);
+//  console.log(URL);
+console.log(options);
+	return postAPI(options);
+  //let URL = 'http://localhost:3000/auth/add/id/13/eventid/1';
+  //console.log(URL);
+//return   $.post(URL);
+}
+
+function postAPI(URL){
+  //calls API with full URL
+  return $.post(URL);
+}
+
+
+function refreshPage(response){
+  console.log('refresh data');
+  console.log(response);
 }

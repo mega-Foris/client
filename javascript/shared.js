@@ -16,7 +16,7 @@ function prepareRequest(query){
   const route_URL = query;
   // return heroku + route_URL;
 	// return local + route_URL;
-	return API_URL + route_URL;
+	return local + route_URL;
 }
 
 //calls API with full URL

@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 });
-
+i
 //event creation
 function submitEventForm() {
   $('form').submit(function(event){
