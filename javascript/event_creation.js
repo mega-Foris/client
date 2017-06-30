@@ -41,7 +41,8 @@ function submitEventForm() {
       $.post('https://forisevents.herokuapp.com/api/v1/events/createEvent', eventObject, function(eventObject){
       console.log('Post that shit');
     }).then(result => {
-      console.log(result);
+      let event_id = result[0].id;
+      window.location.href = `./event_profile.html?id=${event_id}`;
     });
     });
   })
