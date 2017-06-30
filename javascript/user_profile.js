@@ -31,7 +31,7 @@ function appendUserInfo(response){
   response_array.push(response);
   appendCoverPhoto(response);
   appendProfilePicture(response);
-  appendProfileDetails(response)
+  appendProfileDetails(response);
   appendUpcomingEvents(response_array);
   appendPastEvents(response_array);
   //showProfileAttributes(array[0].attributes);
@@ -45,7 +45,6 @@ function appendProfileDetails(response){
     $('#full-name').append(name);
     $('#birth-year').append(bday);
     $('#fav-sport').append(sport);
-
 }
 
 function appendCoverPhoto(response){

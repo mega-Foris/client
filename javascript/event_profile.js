@@ -11,6 +11,9 @@ $(document).ready(function(){
   $('.user-facts').on('click', '#add-attendee',function(){
   addUsertoEvent(event_id);
   });
+  $('.event-comments').on('click', '#add-comment',function(){
+  addCommenttoEvent(event_id);
+  });
 });//end document ready
 
 function getEventInfo(id){
@@ -35,16 +38,14 @@ function showAttendees(people){
     const source = $('#attendee-template').html();
     const template = Handlebars.compile(source);
     const html = template({people});
-    console.log(html);
-    console.log('that was peeps');
-    $('.user-facts').append(html);
+    $('.user-facts-list').append(html);
 }
 function showComments(comment){
   console.log(comment);
     const source = $('#comment-template').html();
     const template = Handlebars.compile(source);
     const html = template({comment});
-    $('.event-comments').append(html);
+    $('.comments-list').append(html);
 }
 
 function handleUserRequest(){
@@ -53,11 +54,9 @@ function handleUserRequest(){
 }
 
 function handleUserLogout(){
-  let id = localStorage.id
+  let id = localStorage.id;
   window.location.href = `./user_profile.html?id=${id}`;
 }
-
-
 
 function displayDifficulty(difficulty){
  const img =   getDifficultyImage(difficulty);
@@ -68,11 +67,10 @@ function displayDifficulty(difficulty){
 }
 
 function addUsertoEvent(event_id){
-  //get token user id
   let user_id = localStorage.id;
-  sendDatatoAPI(user_id, event_id).then(refreshPage);
-  //insert into person-eventtable
-  //re-load page
+  sendDatatoAPI(user_id, event_id).then(function(){
+    location.reload();
+  });
 }
 
 function sendDatatoAPI(user_id, event_id){
@@ -82,13 +80,25 @@ function sendDatatoAPI(user_id, event_id){
 			Authorization: `Bearer ${localStorage.token}`
 		}
 	};
-  //let URL = prepareRequest(`auth/add/id/${user_id}/eventid/${event_id}`);
-//  console.log(URL);
-console.log(options);
 	return postAPI(options);
-  //let URL = 'http://localhost:3000/auth/add/id/13/eventid/1';
-  //console.log(URL);
-//return   $.post(URL);
+}
+
+function addCommenttoEvent(event_id){
+  let comment = $('#comment-field').val();
+  let user_id = localStorage.id;
+  sendCommentDatatoAPI(user_id, event_id, comment).then(function(){
+    location.reload();
+  });
+}
+
+function sendCommentDatatoAPI(user_id, event_id, comment){
+  let options = {
+		url: prepareRequest(`auth/add/id/${user_id}/eventid/${event_id}/comment/${comment}`),
+		headers: {
+			Authorization: `Bearer ${localStorage.token}`
+		}
+	};
+	return postAPI(options);
 }
 
 function postAPI(URL){
