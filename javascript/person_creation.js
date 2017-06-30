@@ -48,10 +48,10 @@ function submitPersonForm() {
         console.log("result.id[0].id");
         console.log(result.id[0].id);
         console.log("result.id[0].name");
-        console.log(result.id[0].name);
+        console.log(result.person.first_name);
         localStorage.token = result.token;
         localStorage.id = result.id[0].id;
-        localStorage.name = result.id[0].name
+        localStorage.name = result.person.first_name
         // localStarage.user_id = result.id;
         alert('Sign-up Successful!');
         window.location = '/index.html';
