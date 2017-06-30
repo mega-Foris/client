@@ -16,6 +16,10 @@
 
 	<body class="main-body">
 		<header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a class="directToUserProfile" href="#">Profile</a></li>
+        <li><a href="#!" onclick="localStorage.clear()">Log Out</a></li>
+      </ul>
 			<nav>
 		    <div class="nav-wrapper col s12 main-nav">
 					<img src="foris-images/foris-logo.svg" class="brand-logo logo-image"/>
@@ -28,8 +32,14 @@
 		        <li class="sport-button"><a href="about.html">About</a></li>
 		        <li class="sport-button"><a href="event_profile.html">Events</a></li>
             <li class="sport-button"><a href="event_creation.html">Create Event!</a></li>
-
-						<li class="login-button"><a href="login.html">Login/Signup</a></li>
+            <li><a class="loggedin namelogged dropdown-button" href="#!" data-activates="dropdown1">Welcome!<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li class="notloggedin login-button"><a href="login.html">Login/Signup</a></li>
+            <!-- <li class="loggedin login-button"><a href="login.html">{{id}}</a></li> -->
+<!--
+            <ul id="dropdown1" class="dropdown-content login-button">
+              <li><a href="#!">Profile</a></li>
+              <li><a href="#!">Log Out</a></li>
+            </ul> -->
 
 						<!-- <button data-target="modal1" class="login-button btn" href="#modal1">Login/Singup</button> -->
 					</ul>
@@ -133,6 +143,13 @@
 		<script type="text/javascript" src="./javascript/client.js" charset="utf-8"></script>
     <script type="text/javascript" src="./javascript/shared.js" charset="utf-8"></script>
     <script type="text/javascript" src="./javascript/person_creation.js" charset="utf-8"></script>
+
+    <!-- <script id="nav-template" type="text/x-handlebars-template">
+      {{#if location.id==true}}
+      <li class="notloggedin login-button"><a href="login.html">{{id}}</a></li>
+      {{/if}}
+    </script> -->
+
     <script id="event-template" type="text/x-handlebars-template">
 
 		 {{#each events}}
@@ -149,6 +166,10 @@
     	{{/each}}
 
     </script>
+    <!-- <script src="/scripts/shared.js"></script>
+     <script type="text/javascript">
+       logout();
+   </script> -->
 
   </body>
 </html>

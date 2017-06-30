@@ -52,6 +52,13 @@ function handleUserRequest(){
   window.location.href = `./user_profile.html?id=${id}`;
 }
 
+function handleUserLogout(){
+  let id = localStorage.id
+  window.location.href = `./user_profile.html?id=${id}`;
+}
+
+
+
 function displayDifficulty(difficulty){
  const img =   getDifficultyImage(difficulty);
  let template = `
