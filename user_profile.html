@@ -15,27 +15,41 @@
   </head>
 
 	<body class="user-profile-body">
-		<header>
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a class="directToUserProfile" href="#">Profile</a></li>
+        <li><a href="#!" onclick="localStorage.clear(); location.reload()">Log Out</a></li>
+      </ul>
 			<nav>
 		    <div class="nav-wrapper col s12 main-nav">
+					<!-- <img src="foris-images/foris-logo.svg" class="brand-logo logo-image"/> -->
 		      <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
 					<!-- <a href="#!" class="brand-logo">Foris<span class="hide-on-med-and-down"></span></a> -->
 					<!-- <a href="#!" class="brand-logo"><span class="show-on-med-and-down"></span>Foris</a> -->
-					<a href="index.html"><img src="foris-images/foris-logo-text.svg" class="brand-logo logo-image-text"/></a>
+					<!-- <a href="index.html"><img src="foris-images/foris-logo-text.svg" class="brand-logo logo-image-text"/></a> -->
 		      <ul id="nav-mobile" class="nav-buttons center hide-on-med-and-down">
-		        <li class="sport-button"><a href="index.html">Browse</a></li>
+		        <li class="sport-button"><a href="index.html">Home</a></li>
 		        <li class="sport-button"><a href="about.html">About</a></li>
-		        <li class="sport-button"><a href="event_profile.html">Events</a></li>
-						<li class="sport-button"><a href="event_creation.html">Create Event!</a></li>
-						<li class="login-button"><a href="login.html">Login/Signup</a></li>
+		        <!-- <li class="sport-button"><a href="event_profile.html">Events</a></li> -->
+            <li class="sport-button"><a href="event_creation.html">Create Event!</a></li>
+            <li><a class="loggedin namelogged dropdown-button" href="#!" data-activates="dropdown1">Welcome, <i class="material-icons right">arrow_drop_down</i></a></li>
+						<li class="notloggedin login-button"><a href="login.html">Login/Signup</a></li>
+            <!-- <li class="loggedin login-button"><a href="login.html">{{id}}</a></li> -->
+<!--
+            <ul id="dropdown1" class="dropdown-content login-button">
+              <li><a href="#!">Profile</a></li>
+              <li><a href="#!">Log Out</a></li>
+            </ul> -->
+
+						<!-- <button data-target="modal1" class="login-button btn" href="#modal1">Login/Singup</button> -->
 					</ul>
 					<ul id="slide-out" class="side-nav">
 						<li><a href="about.html">About</a></li>
 						<li><a href="#">Search Trips</a></li>
+						<button data-target="modal1" class="login-button btn" href="#modal1">Login/Singup</button>
 					</ul>
 		    </div>
 	  	</nav>
-			<!-- <img src="foris-images/foris-logo.svg" class="logo-image"/> -->
 		</header>
 
 		<main>
@@ -81,15 +95,15 @@
 
     </main>
 
-		<footer class="main-footer">
+    <footer class="main-footer">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
-						<h5 class="white-text">Footer Content</h5>
-						<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+						<h5 class="white-text">Team Mega-Foris Thanks You!</h5>
+						<p class="grey-text text-lighten-4">We hope your adventures are full of fun and memories!</p>
 					</div>
 					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text">Links</h5>
+						<!-- <h5 class="white-text">Dont look here... </h5> -->
 					</div>
 				</div>
 					<p class= "copyright-text">© 2017 Copyright Mega Foris</p>
