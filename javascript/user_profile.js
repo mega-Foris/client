@@ -31,14 +31,25 @@ function appendUserInfo(response){
   response_array.push(response);
   appendCoverPhoto(response);
   appendProfilePicture(response);
-  showProfileCard(response_array);
+  appendProfileDetails(response)
   appendUpcomingEvents(response_array);
   appendPastEvents(response_array);
   //showProfileAttributes(array[0].attributes);
 
 }
 
+function appendProfileDetails(response){
+    let name = `${response.first_name} ${response.last_name}`;
+    let sport = response.attributes[2].value;
+    let bday = response.attributes[1].value;
+    $('#full-name').append(name);
+    $('#birth-year').append(bday);
+    $('#fav-sport').append(sport);
+
+}
+
 function appendCoverPhoto(response){
+  console.log(response);
   let sport = response.attributes[2].value;
   let cover = getCoverPhoto(sport);
   let html = `<img src=${cover} alt="Add your favorite sport" id="cover-photo profile-cover" class="">`;
@@ -67,6 +78,7 @@ function appendProfilePicture(response){
 
 function appendUpcomingEvents(person){
   console.log(person);
+  console.log('made it to upcoming events');
   const source = $('#upcoming-event-user-profile-template').html();
   const template = Handlebars.compile(source);
   const html = template({person});
@@ -82,12 +94,12 @@ function appendPastEvents(person){
   const html = template({person});
   $('.past-trips').append(html);
 }
-
-function showProfileCard(person){
-  console.log(person);
-    const source = $('#user-profile-template').html();
-    const template = Handlebars.compile(source);
-    const html = template({person});
-    console.log(html);
-  //  $('#user-profile-card').append(html);
-}
+//
+// function showProfileCard(person){
+//   console.log(person);
+//     const source = $('#user-profile-template').html();
+//     const template = Handlebars.compile(source);
+//     const html = template({person});
+//     console.log(html);
+//   //  $('#user-profile-card').append(html);
+// }
