@@ -68,11 +68,11 @@ function prepareEventCard(event){
 	const id = event.id;
 	let template = `
       <div class="row">
-        <div class="col s12 m7">
+        <div class="col s12 m8 offset-m2">
           <div class="card" data-id=${id} id="main-page-events">
             <div class="card-image">
               <img src=${img}>
-              <span class="card-title">${title}</span>
+              <span class="white-text card-title">${title}</span>
             </div>
             <div class="card-content">
               <p>${description}</p>

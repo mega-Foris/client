@@ -312,4 +312,25 @@ input[type=password]:focus:not([readonly]) {
 .user-profile-body {
   background-image: url(../foris-images/night-camp.png); }
 
+.adding-button {
+  background-color: #443728;
+  color: white;
+  margin-left: 1em;
+  margin-right: 1.5em; }
+
+.user-facts {
+  overflow: scroll; }
+
+.event-comments {
+  overflow: scroll; }
+
+.event-comments {
+  top: -3em; }
+
+.comments-list {
+  margin-top: 0; }
+
+i.left {
+  margin-right: 0; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -67,13 +67,26 @@
 			<div class="right-container col s12">
 				<section class="user-facts">
 					<h4 class="user-title"><i class="small material-icons">perm_identity</i>Attendees: </h4>
-          <a class="btn-floating btn-large waves-effect waves-light #443728" id="add-attendee"><i class="material-icons">add</i></a>
-				</section>
-			</div>
+          <a class="waves-effect waves-light btn #443728 adding-button" id="add-attendee"><i class="material-icons left">add</i>Join Event!</a>
+          <ul class="user-facts-list">
 
+          </ul>
+        </section>
+			</div>
 			<div class="comment-container col s12">
 				<section class="event-comments">
 					<h4 class="comment-title"><i class="small material-icons">chat_bubble</i>Comments:</h4>
+            <div class="row">
+              <div class="col s6">
+                Add your comment here:
+                <div class="input-field inline">
+                  <input id="comment-field" type="text">
+                </div>
+              </div>
+                <a class="waves-effect waves-light btn #443728 adding-button col s4" id="add-comment"><i class="material-icons left">add</i>Add a comment</a>
+            </div>
+          <ul class="comments-list">
+          </ul>
 				</section>
 			</div>
 		</main>
@@ -141,12 +154,12 @@
 		<script type="text/javascript" src="./javascript/person_creation.js" charset="utf-8"></script>
 		<script id="attendee-template" type="text/x-handlebars-template">
 		 {{#each people}}
-				<p class="script flow-text" id="user-name" data-id={{id}}>{{first_name}}</p>
+				<li class="script flow-text" id="user-name" data-id={{id}}>{{first_name}}</li>
      {{/each}}
 	 </script>
 	 <script id="comment-template" type="text/x-handlebars-template">
 		{{#each comment}}
-			 <p class="script flow-text">{{comment}}</p>
+			 <li class="script flow-text">{{comment}}</li>
 		 {{/each}}
 	</script>
   </body>
